@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxi dev",
-    "build": "npx nuxt build",
+    "build": "cross-env NUXT_HOST=0.0.0.0 npx nuxt build",
     "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
