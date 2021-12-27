@@ -1,12 +1,12 @@
 
 // --------------------
-// Request: E:/personal/vue/nuxt-vue-ssr-demo/node_modules/nuxt3/dist/app/entry
+// Request: F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/nuxt3/dist/app/entry
 // Parents: 
 // - <entry> ($id_c757eb9e)
 // Dependencies: 
 // - /node_modules/nuxt3/dist/app/bootstrap.mjs ($id_fef466a9)
 // --------------------
-const $id_bd2a457b = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const $id_b5a14054 = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const entry = true ? (ctx) => __vite_ssr_dynamic_import__('/node_modules/nuxt3/dist/app/bootstrap.mjs').then((m) => m.default(ctx)) : () => __vite_ssr_dynamic_import__('/node_modules/nuxt3/dist/app/bootstrap.mjs').then((m) => m.default);
 if (false) {
   entry();
@@ -19,27 +19,27 @@ __vite_ssr_exports__.default = entry;
 // --------------------
 // Request: /node_modules/nuxt3/dist/app/bootstrap.mjs
 // Parents: 
-// - E:/personal/vue/nuxt-vue-ssr-demo/node_modules/nuxt3/dist/app/entry ($id_bd2a457b)
+// - F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/nuxt3/dist/app/entry ($id_b5a14054)
 // Dependencies: 
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // - /node_modules/nuxt3/dist/app/index.mjs ($id_d8c2af0f)
-// - /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/css.mjs ($id_61f758b2)
-// - /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/plugins/server.mjs ($id_d31326cf)
-// - /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/root-component.mjs ($id_15926c23)
-// - /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/app-component.mjs ($id_f3e646fc)
+// - /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/css.mjs ($id_a62e50ec)
+// - /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/plugins/server.mjs ($id_ec96a599)
+// - /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/root-component.mjs ($id_bb42af83)
+// - /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/app-component.mjs ($id_3766032f)
 // --------------------
 const $id_fef466a9 = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
 const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/nuxt3/dist/app/index.mjs");
 
-const __vite_ssr_import_2__ = await __vite_ssr_import__("/@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/css.mjs");
+const __vite_ssr_import_2__ = await __vite_ssr_import__("/@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/css.mjs");
 
-const __vite_ssr_import_3__ = await __vite_ssr_import__("/@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/plugins/server.mjs");
+const __vite_ssr_import_3__ = await __vite_ssr_import__("/@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/plugins/server.mjs");
 
-const __vite_ssr_import_4__ = await __vite_ssr_import__("/@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/root-component.mjs");
+const __vite_ssr_import_4__ = await __vite_ssr_import__("/@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/root-component.mjs");
 
-const __vite_ssr_import_5__ = await __vite_ssr_import__("/@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/app-component.mjs");
+const __vite_ssr_import_5__ = await __vite_ssr_import__("/@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/app-component.mjs");
 
 let entry;
 const plugins = __vite_ssr_import_1__.normalizePlugins(__vite_ssr_import_3__.default);
@@ -99,19 +99,19 @@ __vite_ssr_exports__.default = (ctx) => entry(ctx);
 // - /node_modules/nuxt3/dist/pages/runtime/nested-page.vue ($id_c268603a)
 // - /node_modules/nuxt3/dist/pages/runtime/page.vue ($id_10628d40)
 // - /node_modules/nuxt3/dist/pages/runtime/layout.mjs ($id_9b68c93f)
-// - /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/layouts.mjs ($id_fcc36b71)
+// - /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/layouts.mjs ($id_21eaddf1)
 // - /pages/find/index.vue ($id_800170aa)
-// - /components/common/banner.vue ($id_945f3841)
 // - /pages/home/index.vue ($id_cfd7165b)
 // - /pages/my/index.vue ($id_61b42ae7)
-// - /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/components.mjs ($id_377cfd25)
+// - /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/components.mjs ($id_d4907e5f)
+// - /components/common/banner.vue ($id_945f3841)
 // - /components/common/Footer.vue ($id_f219ac30)
 // - /node_modules/nuxt3/dist/app/components/nuxt-root.vue ($id_f8564e04)
 // - /app.vue ($id_2b46e842)
 // Dependencies: 
 
 // --------------------
-const $id_60f0615f = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/vue/dist/vue.cjs.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/vue/dist/vue.cjs.js".') })
+const $id_60f0615f = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/vue/dist/vue.cjs.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/vue/dist/vue.cjs.js".') })
 
 
 // --------------------
@@ -296,7 +296,7 @@ function defineGetter(obj, key, val) {
 // Dependencies: 
 
 // --------------------
-const $id_a2c811c4 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/hookable/dist/index.mjs').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/hookable/dist/index.mjs".') })
+const $id_a2c811c4 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/hookable/dist/index.mjs').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/hookable/dist/index.mjs".') })
 
 
 // --------------------
@@ -421,7 +421,7 @@ Object.defineProperty(__vite_ssr_exports__, "legacyPlugin", { enumerable: true, 
 // Dependencies: 
 
 // --------------------
-const $id_39e12da7 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/unenv/runtime/mock/proxy.mjs').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/unenv/runtime/mock/proxy.mjs".') })
+const $id_39e12da7 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/unenv/runtime/mock/proxy.mjs').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/unenv/runtime/mock/proxy.mjs".') })
 
 
 // --------------------
@@ -533,7 +533,7 @@ Object.defineProperty(__vite_ssr_exports__, "defineNuxtComponent", { enumerable:
 // Dependencies: 
 
 // --------------------
-const $id_f9a4a698 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/vue-router/dist/vue-router.cjs.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/vue-router/dist/vue-router.cjs.js".') })
+const $id_f9a4a698 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/vue-router/dist/vue-router.cjs.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/vue-router/dist/vue-router.cjs.js".') })
 
 
 // --------------------
@@ -746,7 +746,7 @@ function generateKey(keys) {
 // Dependencies: 
 
 // --------------------
-const $id_fbf6dac3 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/murmurhash-es/dist/index.mjs').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/murmurhash-es/dist/index.mjs".') })
+const $id_fbf6dac3 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/murmurhash-es/dist/index.mjs').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/murmurhash-es/dist/index.mjs".') })
 
 
 // --------------------
@@ -835,7 +835,7 @@ function writeServerCookie(res, name, value, opts = {}) {
 // Dependencies: 
 
 // --------------------
-const $id_f4975261 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/cookie-es/dist/index.mjs').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/cookie-es/dist/index.mjs".') })
+const $id_f4975261 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/cookie-es/dist/index.mjs').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/cookie-es/dist/index.mjs".') })
 
 
 // --------------------
@@ -845,7 +845,7 @@ const $id_f4975261 = (global, exports, importMeta, ssrImport, ssrDynamicImport, 
 // Dependencies: 
 
 // --------------------
-const $id_57d7ded6 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/h3/dist/index.mjs').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/h3/dist/index.mjs".') })
+const $id_57d7ded6 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/h3/dist/index.mjs').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/h3/dist/index.mjs".') })
 
 
 // --------------------
@@ -855,7 +855,7 @@ const $id_57d7ded6 = (global, exports, importMeta, ssrImport, ssrDynamicImport, 
 // Dependencies: 
 
 // --------------------
-const $id_03d15ecd = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/destr/dist/index.mjs').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/destr/dist/index.mjs".') })
+const $id_03d15ecd = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/destr/dist/index.mjs').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/destr/dist/index.mjs".') })
 
 
 // --------------------
@@ -884,14 +884,14 @@ Object.defineProperty(__vite_ssr_exports__, "useRequestHeaders", { enumerable: t
 
 
 // --------------------
-// Request: /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/css.mjs
+// Request: /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/css.mjs
 // Parents: 
 // - /node_modules/nuxt3/dist/app/bootstrap.mjs ($id_fef466a9)
 // Dependencies: 
 // - /node_modules/element-plus/dist/index.css ($id_93984529)
 // - /assets/css/reset.css ($id_9c912bac)
 // --------------------
-const $id_61f758b2 = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const $id_a62e50ec = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/element-plus/dist/index.css");
 
 const __vite_ssr_import_1__ = await __vite_ssr_import__("/assets/css/reset.css");
@@ -902,7 +902,7 @@ const __vite_ssr_import_1__ = await __vite_ssr_import__("/assets/css/reset.css")
 // --------------------
 // Request: /node_modules/element-plus/dist/index.css
 // Parents: 
-// - /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/css.mjs ($id_61f758b2)
+// - /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/css.mjs ($id_a62e50ec)
 // Dependencies: 
 
 // --------------------
@@ -914,7 +914,7 @@ __vite_ssr_exports__.default = "@charset \"UTF-8\";\n:root{--el-color-white:#fff
 // --------------------
 // Request: /assets/css/reset.css
 // Parents: 
-// - /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/css.mjs ($id_61f758b2)
+// - /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/css.mjs ($id_a62e50ec)
 // Dependencies: 
 
 // --------------------
@@ -924,7 +924,7 @@ __vite_ssr_exports__.default = "*{\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\nul, 
 
 
 // --------------------
-// Request: /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/plugins/server.mjs
+// Request: /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/plugins/server.mjs
 // Parents: 
 // - /node_modules/nuxt3/dist/app/bootstrap.mjs ($id_fef466a9)
 // Dependencies: 
@@ -933,9 +933,9 @@ __vite_ssr_exports__.default = "*{\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\nul, 
 // - /node_modules/nuxt3/dist/meta/runtime/plugin.mjs ($id_9fd5f35e)
 // - /node_modules/nuxt3/dist/pages/runtime/router.mjs ($id_a4d6cb5b)
 // - /node_modules/@nuxt/nitro/dist/runtime/app/nitro.client.mjs ($id_7b587af2)
-// - /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/components.mjs ($id_377cfd25)
+// - /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/components.mjs ($id_d4907e5f)
 // --------------------
-const $id_d31326cf = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const $id_ec96a599 = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/nuxt3/dist/app/plugins/preload.server.mjs");
 
 const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/nuxt3/dist/meta/runtime/lib/vueuse-head.plugin.mjs");
@@ -946,7 +946,7 @@ const __vite_ssr_import_3__ = await __vite_ssr_import__("/node_modules/nuxt3/dis
 
 const __vite_ssr_import_4__ = await __vite_ssr_import__("/node_modules/@nuxt/nitro/dist/runtime/app/nitro.client.mjs");
 
-const __vite_ssr_import_5__ = await __vite_ssr_import__("/@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/components.mjs");
+const __vite_ssr_import_5__ = await __vite_ssr_import__("/@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/components.mjs");
 
 __vite_ssr_exports__.default = [
   __vite_ssr_import_0__.default,
@@ -962,7 +962,7 @@ __vite_ssr_import_1__.default,
 // --------------------
 // Request: /node_modules/nuxt3/dist/app/plugins/preload.server.mjs
 // Parents: 
-// - /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/plugins/server.mjs ($id_d31326cf)
+// - /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/plugins/server.mjs ($id_ec96a599)
 // Dependencies: 
 // - /node_modules/nuxt3/dist/app/index.mjs ($id_d8c2af0f)
 // --------------------
@@ -985,7 +985,7 @@ __vite_ssr_exports__.default = __vite_ssr_import_0__.defineNuxtPlugin((nuxtApp) 
 // --------------------
 // Request: /node_modules/nuxt3/dist/meta/runtime/lib/vueuse-head.plugin.mjs
 // Parents: 
-// - /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/plugins/server.mjs ($id_d31326cf)
+// - /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/plugins/server.mjs ($id_ec96a599)
 // Dependencies: 
 // - /node_modules/@vueuse/head/dist/index.mjs ($id_c032264e)
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
@@ -1438,13 +1438,13 @@ Object.defineProperty(__vite_ssr_exports__, "useHead", { enumerable: true, confi
 // --------------------
 // Request: /node_modules/nuxt3/dist/meta/runtime/plugin.mjs
 // Parents: 
-// - /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/plugins/server.mjs ($id_d31326cf)
+// - /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/plugins/server.mjs ($id_ec96a599)
 // Dependencies: 
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // - /node_modules/nuxt3/dist/meta/runtime/components.mjs ($id_94744df3)
 // - /node_modules/nuxt3/dist/meta/runtime/composables.mjs ($id_ca9295be)
 // - /node_modules/nuxt3/dist/app/index.mjs ($id_d8c2af0f)
-// - /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/meta.config.mjs ($id_a3d3d29e)
+// - /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/meta.config.mjs ($id_0096ed21)
 // --------------------
 const $id_9fd5f35e = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
@@ -1455,7 +1455,7 @@ const __vite_ssr_import_2__ = await __vite_ssr_import__("/node_modules/nuxt3/dis
 
 const __vite_ssr_import_3__ = await __vite_ssr_import__("/node_modules/nuxt3/dist/app/index.mjs");
 
-const __vite_ssr_import_4__ = await __vite_ssr_import__("/@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/meta.config.mjs");
+const __vite_ssr_import_4__ = await __vite_ssr_import__("/@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/meta.config.mjs");
 
 __vite_ssr_exports__.default = __vite_ssr_import_3__.defineNuxtPlugin((nuxtApp) => {
   __vite_ssr_import_2__.useMeta(__vite_ssr_import_4__.default.globalMeta);
@@ -1721,17 +1721,17 @@ Object.defineProperty(__vite_ssr_exports__, "useMeta", { enumerable: true, confi
 // Dependencies: 
 
 // --------------------
-const $id_852b06a2 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/@vue/shared/dist/shared.cjs.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/@vue/shared/dist/shared.cjs.js".') })
+const $id_852b06a2 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/@vue/shared/dist/shared.cjs.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/@vue/shared/dist/shared.cjs.js".') })
 
 
 // --------------------
-// Request: /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/meta.config.mjs
+// Request: /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/meta.config.mjs
 // Parents: 
 // - /node_modules/nuxt3/dist/meta/runtime/plugin.mjs ($id_9fd5f35e)
 // Dependencies: 
 
 // --------------------
-const $id_a3d3d29e = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const $id_0096ed21 = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 __vite_ssr_exports__.default = {"globalMeta":{"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"}],"link":[],"style":[],"script":[]},"mixinKey":"created"};
 }
 
@@ -1739,7 +1739,7 @@ __vite_ssr_exports__.default = {"globalMeta":{"meta":[{"charset":"utf-8"},{"name
 // --------------------
 // Request: /node_modules/nuxt3/dist/pages/runtime/router.mjs
 // Parents: 
-// - /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/plugins/server.mjs ($id_d31326cf)
+// - /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/plugins/server.mjs ($id_ec96a599)
 // Dependencies: 
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // - /node_modules/vue-router/dist/vue-router.cjs.js ($id_f9a4a698)
@@ -1747,7 +1747,7 @@ __vite_ssr_exports__.default = {"globalMeta":{"meta":[{"charset":"utf-8"},{"name
 // - /node_modules/nuxt3/dist/pages/runtime/page.vue ($id_10628d40)
 // - /node_modules/nuxt3/dist/pages/runtime/layout.mjs ($id_9b68c93f)
 // - /node_modules/nuxt3/dist/app/index.mjs ($id_d8c2af0f)
-// - /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/routes.mjs ($id_86363a5f)
+// - /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/routes.mjs ($id_070944bf)
 // --------------------
 const $id_a4d6cb5b = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
@@ -1762,7 +1762,7 @@ const __vite_ssr_import_4__ = await __vite_ssr_import__("/node_modules/nuxt3/dis
 
 const __vite_ssr_import_5__ = await __vite_ssr_import__("/node_modules/nuxt3/dist/app/index.mjs");
 
-const __vite_ssr_import_6__ = await __vite_ssr_import__("/@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/routes.mjs");
+const __vite_ssr_import_6__ = await __vite_ssr_import__("/@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/routes.mjs");
 
 __vite_ssr_exports__.default = __vite_ssr_import_5__.defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.component("NuxtNestedPage", __vite_ssr_import_2__.default);
@@ -1860,7 +1860,7 @@ _sfc_main.setup = (props, ctx) => {
 }
 const __vite_ssr_import_3__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_3__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"E:/personal/vue/nuxt-vue-ssr-demo/node_modules/nuxt3/dist/pages/runtime/nested-page.vue"]]);
+__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_3__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/nuxt3/dist/pages/runtime/nested-page.vue"]]);
 }
 
 
@@ -1869,15 +1869,15 @@ __vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_3__.default(_sfc_m
 // Parents: 
 // - /node_modules/nuxt3/dist/pages/runtime/nested-page.vue ($id_c268603a)
 // - /node_modules/nuxt3/dist/pages/runtime/page.vue ($id_10628d40)
-// - /components/common/banner.vue ($id_945f3841)
 // - /pages/home/index.vue ($id_cfd7165b)
+// - /components/common/banner.vue ($id_945f3841)
 // - /components/common/Footer.vue ($id_f219ac30)
 // - /node_modules/nuxt3/dist/app/components/nuxt-root.vue ($id_f8564e04)
 // - /app.vue ($id_2b46e842)
 // Dependencies: 
 
 // --------------------
-const $id_b215fa1c = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/vue/server-renderer/index.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/vue/server-renderer/index.js".') })
+const $id_b215fa1c = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/vue/server-renderer/index.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/vue/server-renderer/index.js".') })
 
 
 // --------------------
@@ -1886,9 +1886,9 @@ const $id_b215fa1c = (global, exports, importMeta, ssrImport, ssrDynamicImport, 
 // - /node_modules/nuxt3/dist/pages/runtime/nested-page.vue ($id_c268603a)
 // - /node_modules/nuxt3/dist/pages/runtime/page.vue ($id_10628d40)
 // - /pages/find/index.vue ($id_800170aa)
-// - /components/common/banner.vue ($id_945f3841)
 // - /pages/home/index.vue ($id_cfd7165b)
 // - /pages/my/index.vue ($id_61b42ae7)
+// - /components/common/banner.vue ($id_945f3841)
 // - /components/common/Footer.vue ($id_f219ac30)
 // - /node_modules/nuxt3/dist/app/components/nuxt-root.vue ($id_f8564e04)
 // - /app.vue ($id_2b46e842)
@@ -2073,7 +2073,7 @@ _sfc_main.setup = (props, ctx) => {
 }
 const __vite_ssr_import_6__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_6__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"E:/personal/vue/nuxt-vue-ssr-demo/node_modules/nuxt3/dist/pages/runtime/page.vue"]]);
+__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_6__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/nuxt3/dist/pages/runtime/page.vue"]]);
 }
 
 
@@ -2084,12 +2084,12 @@ __vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_6__.default(_sfc_m
 // - /node_modules/nuxt3/dist/pages/runtime/router.mjs ($id_a4d6cb5b)
 // Dependencies: 
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
-// - /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/layouts.mjs ($id_fcc36b71)
+// - /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/layouts.mjs ($id_21eaddf1)
 // --------------------
 const $id_9b68c93f = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
-const __vite_ssr_import_1__ = await __vite_ssr_import__("/@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/layouts.mjs");
+const __vite_ssr_import_1__ = await __vite_ssr_import__("/@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/layouts.mjs");
 
 __vite_ssr_exports__.default = __vite_ssr_import_0__.defineComponent({
   props: {
@@ -2116,13 +2116,13 @@ __vite_ssr_exports__.default = __vite_ssr_import_0__.defineComponent({
 
 
 // --------------------
-// Request: /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/layouts.mjs
+// Request: /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/layouts.mjs
 // Parents: 
 // - /node_modules/nuxt3/dist/pages/runtime/layout.mjs ($id_9b68c93f)
 // Dependencies: 
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // --------------------
-const $id_fcc36b71 = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const $id_21eaddf1 = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
 __vite_ssr_exports__.default = {};
@@ -2130,7 +2130,7 @@ __vite_ssr_exports__.default = {};
 
 
 // --------------------
-// Request: /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/routes.mjs
+// Request: /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/routes.mjs
 // Parents: 
 // - /node_modules/nuxt3/dist/pages/runtime/router.mjs ($id_a4d6cb5b)
 // Dependencies: 
@@ -2138,26 +2138,26 @@ __vite_ssr_exports__.default = {};
 // - /pages/home/index.vue ($id_cfd7165b)
 // - /pages/my/index.vue ($id_61b42ae7)
 // --------------------
-const $id_86363a5f = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const $id_070944bf = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 __vite_ssr_exports__.default = [
   {
     "name": "find",
     "path": "/find",
-    "file": "E:/personal/vue/nuxt-vue-ssr-demo/pages/find/index.vue",
+    "file": "F:/2021work/nuxt3/nuxt-vue-ssr-demo/pages/find/index.vue",
     "children": [],
     "component": () => __vite_ssr_dynamic_import__('/pages/find/index.vue')
   },
   {
     "name": "home",
     "path": "/home",
-    "file": "E:/personal/vue/nuxt-vue-ssr-demo/pages/home/index.vue",
+    "file": "F:/2021work/nuxt3/nuxt-vue-ssr-demo/pages/home/index.vue",
     "children": [],
     "component": () => __vite_ssr_dynamic_import__('/pages/home/index.vue')
   },
   {
     "name": "my",
     "path": "/my",
-    "file": "E:/personal/vue/nuxt-vue-ssr-demo/pages/my/index.vue",
+    "file": "F:/2021work/nuxt3/nuxt-vue-ssr-demo/pages/my/index.vue",
     "children": [],
     "component": () => __vite_ssr_dynamic_import__('/pages/my/index.vue')
   }
@@ -2168,7 +2168,7 @@ __vite_ssr_exports__.default = [
 // --------------------
 // Request: /pages/find/index.vue
 // Parents: 
-// - /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/routes.mjs ($id_86363a5f)
+// - /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/routes.mjs ($id_070944bf)
 // Dependencies: 
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // - /@id/plugin-vue:export-helper ($id_bbb863c1)
@@ -2189,7 +2189,7 @@ _sfc_main.setup = (props, ctx) => {
 };
 const __vite_ssr_import_1__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_1__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "E:/personal/vue/nuxt-vue-ssr-demo/pages/find/index.vue"]]);
+__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_1__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "F:/2021work/nuxt3/nuxt-vue-ssr-demo/pages/find/index.vue"]]);
 ;
 }
 
@@ -2197,149 +2197,105 @@ __vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_1__.default(_sf
 // --------------------
 // Request: /pages/home/index.vue
 // Parents: 
-// - /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/routes.mjs ($id_86363a5f)
-// Dependencies: 
-// - /components/common/banner.vue ($id_945f3841)
-// - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
-// - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
-// - /@id/plugin-vue:export-helper ($id_bbb863c1)
-// --------------------
-const $id_cfd7165b = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-const __vite_ssr_import_0__ = await __vite_ssr_import__("/components/common/banner.vue");
-
-const _sfc_main = {
-  data() {
-    return {
-      bannerList: [
-        {
-          height: "100px",
-          background: `url('/assets/imgs/bed/bed (1).jpg') 0 0 no-repeat`,
-          backgroundSize: "100% 100%"
-        },
-        {
-          height: "100px",
-          background: `url('/assets/imgs/bed/bed (2).jpg') 0 0 no-repeat`,
-          backgroundSize: "100% 100%"
-        },
-        {
-          height: "100px",
-          background: `url('/assets/imgs/bed/bed (3).jpg') 0 0 no-repeat`,
-          backgroundSize: "100% 100%"
-        }
-      ]
-    };
-  }
-};
-const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
-
-const __vite_ssr_import_2__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
-
-function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  const _component_common_banner = __vite_ssr_import_0__.default;
-  _push(`<!--[--><!-- \u4E3B\u9875 --><header> \u4E3B\u9875 </header><div class="main-content"><div class="banner">`);
-  _push(__vite_ssr_import_2__.ssrRenderComponent(_component_common_banner, { imgList: $data.bannerList }, null, _parent));
-  _push(`</div></div><!--]-->`);
-}
-const __vite_ssr_import_3__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
-
-const _sfc_setup = _sfc_main.setup;
-_sfc_main.setup = (props, ctx) => {
-  const ssrContext = __vite_ssr_import_3__.useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = new Set())).add("pages/home/index.vue");
-  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
-};
-const __vite_ssr_import_4__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
-
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_4__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "E:/personal/vue/nuxt-vue-ssr-demo/pages/home/index.vue"]]);
-;
-}
-
-
-// --------------------
-// Request: /components/common/banner.vue
-// Parents: 
-// - /pages/home/index.vue ($id_cfd7165b)
-// - /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/components.mjs ($id_377cfd25)
+// - /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/routes.mjs ($id_070944bf)
 // Dependencies: 
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // - /node_modules/swiper/swiper.esm.js ($id_d1eb9a9e)
 // - /node_modules/swiper/vue/swiper-vue.js ($id_72e3deca)
 // - /node_modules/swiper/swiper.min.css ($id_9d54fdba)
 // - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
+// - /pages/home/index.vue?vue&type=style&index=0&lang.scss ($id_d59ee1e0)
 // - /@id/plugin-vue:export-helper ($id_bbb863c1)
 // --------------------
-const $id_945f3841 = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const $id_cfd7165b = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
 
-  // import Swiper core and required modules
-  const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/swiper/swiper.esm.js");
+// import Swiper core and required modules
+const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/swiper/swiper.esm.js");
 
+// Import Swiper Vue.js components
+const __vite_ssr_import_2__ = await __vite_ssr_import__("/node_modules/swiper/vue/swiper-vue.js");
 
-  // Import Swiper Vue.js components
-  const __vite_ssr_import_2__ = await __vite_ssr_import__("/node_modules/swiper/vue/swiper-vue.js");
+// Import Swiper styles
+const __vite_ssr_import_3__ = await __vite_ssr_import__("/node_modules/swiper/swiper.min.css");
 
-
-  // Import Swiper styles
-  const __vite_ssr_import_3__ = await __vite_ssr_import__("/node_modules/swiper/swiper.min.css");
-
-  // Import Swiper styles
-  const _sfc_main = {
-    props: {
-      imgList : {
-        type: Array,
-        require: true
-      }
-    },
-    components: {
-      Swiper: __vite_ssr_import_2__.Swiper,
-      SwiperSlide: __vite_ssr_import_2__.SwiperSlide,
-    },
-    setup() {
-      const onSwiper = (swiper) => {
-        console.log(swiper);
-      };
-      const onSlideChange = () => {
-        console.log('slide change');
-      };
-      return {
-        onSwiper,
-        onSlideChange,
-        modules: [__vite_ssr_import_1__.Navigation, __vite_ssr_import_1__.Pagination, __vite_ssr_import_1__.Scrollbar, __vite_ssr_import_1__.A11y],
-      };
-    },
-  };
-
+// Import Swiper styles
 const __vite_ssr_import_4__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
-const __vite_ssr_import_5__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
+const _sfc_main = {
+  components: {
+    Swiper: __vite_ssr_import_2__.Swiper, SwiperSlide: __vite_ssr_import_2__.SwiperSlide
+  },
+  setup(){
+    let bannerList = __vite_ssr_import_4__.ref([]),
+        newGoodsList = __vite_ssr_import_4__.ref([]);
+
+    setTimeout(() => {
+      bannerList.value = [
+        {
+          url: '/assets/imgs/bed/bed (1).jpg'
+        },
+       {
+          url: '/assets/imgs/bed/bed (2).jpg'
+        },
+        {
+          url: '/assets/imgs/bed/bed (3).jpg'
+        },
+      ]
+
+      newGoodsList.value = [
+        {
+          url: '/assets/imgs/bed/bed (1).jpg'
+        },
+       {
+          url: '/assets/imgs/bed/bed (2).jpg'
+        },
+        {
+          url: '/assets/imgs/bed/bed (3).jpg'
+        },
+      ]
+    }, 500);
+
+    return {
+      bannerList,
+      newGoodsList
+    }
+  }
+}
+
+const __vite_ssr_import_5__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+
+const __vite_ssr_import_6__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
 
 
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  const _component_swiper = __vite_ssr_import_4__.resolveComponent("swiper")
-  const _component_swiper_slide = __vite_ssr_import_4__.resolveComponent("swiper-slide")
+  const _component_swiper = __vite_ssr_import_5__.resolveComponent("swiper")
+  const _component_swiper_slide = __vite_ssr_import_5__.resolveComponent("swiper-slide")
 
-  _push(__vite_ssr_import_5__.ssrRenderComponent(_component_swiper, __vite_ssr_import_4__.mergeProps({
-    modules: $setup.modules,
+  _push(`<!--[--><!-- 主页 --><header> 主页 </header><div class="main-content"><div class="banner">`)
+  _push(__vite_ssr_import_6__.ssrRenderComponent(_component_swiper, {
+    modules: _ctx.modules,
     navigation: "",
     scrollbar: { draggable: true }
-  }, _attrs), {
-    default: __vite_ssr_import_4__.withCtx((_, _push, _parent, _scopeId) => {
+  }, {
+    default: __vite_ssr_import_5__.withCtx((_, _push, _parent, _scopeId) => {
       if (_push) {
         _push(`<!--[-->`)
-        __vite_ssr_import_5__.ssrRenderList($props.imgList, (item, i) => {
-          _push(__vite_ssr_import_5__.ssrRenderComponent(_component_swiper_slide, { key: i }, {
-            default: __vite_ssr_import_4__.withCtx((_, _push, _parent, _scopeId) => {
+        __vite_ssr_import_6__.ssrRenderList($setup.bannerList, (item, i) => {
+          _push(__vite_ssr_import_6__.ssrRenderComponent(_component_swiper_slide, { key: i }, {
+            default: __vite_ssr_import_5__.withCtx((_, _push, _parent, _scopeId) => {
               if (_push) {
-                _push(`<div style="${
-                  __vite_ssr_import_5__.ssrRenderStyle({item})
+                _push(`<div class="banner-item" style="${
+                  __vite_ssr_import_6__.ssrRenderStyle({backgroundImage: `url('${item.url}')`})
                 }"${
                   _scopeId
                 }></div>`)
               } else {
                 return [
-                  __vite_ssr_import_4__.createVNode("div", {
-                    style: {item}
+                  __vite_ssr_import_5__.createVNode("div", {
+                    class: "banner-item",
+                    style: {backgroundImage: `url('${item.url}')`}
                   }, null, 4 /* STYLE */)
                 ]
               }
@@ -2350,11 +2306,12 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
         _push(`<!--]-->`)
       } else {
         return [
-          (__vite_ssr_import_4__.openBlock(true), __vite_ssr_import_4__.createBlock(__vite_ssr_import_4__.Fragment, null, __vite_ssr_import_4__.renderList($props.imgList, (item, i) => {
-            return (__vite_ssr_import_4__.openBlock(), __vite_ssr_import_4__.createBlock(_component_swiper_slide, { key: i }, {
-              default: __vite_ssr_import_4__.withCtx(() => [
-                __vite_ssr_import_4__.createVNode("div", {
-                  style: {item}
+          (__vite_ssr_import_5__.openBlock(true), __vite_ssr_import_5__.createBlock(__vite_ssr_import_5__.Fragment, null, __vite_ssr_import_5__.renderList($setup.bannerList, (item, i) => {
+            return (__vite_ssr_import_5__.openBlock(), __vite_ssr_import_5__.createBlock(_component_swiper_slide, { key: i }, {
+              default: __vite_ssr_import_5__.withCtx(() => [
+                __vite_ssr_import_5__.createVNode("div", {
+                  class: "banner-item",
+                  style: {backgroundImage: `url('${item.url}')`}
                 }, null, 4 /* STYLE */)
               ]),
               _: 2 /* DYNAMIC */
@@ -2365,26 +2322,30 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
     }),
     _: 1 /* STABLE */
   }, _parent))
+  _push(` 吴圆圆是个猪 </div><div class="new-good-preview"></div></div><!--]-->`)
 }
 
+const __vite_ssr_import_7__ = await __vite_ssr_import__("/pages/home/index.vue?vue&type=style&index=0&lang.scss");
 
-const __vite_ssr_import_6__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+
+const __vite_ssr_import_8__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
 const _sfc_setup = _sfc_main.setup
 _sfc_main.setup = (props, ctx) => {
-  const ssrContext = __vite_ssr_import_6__.useSSRContext()
-  ;(ssrContext.modules || (ssrContext.modules = new Set())).add("components/common/banner.vue")
+  const ssrContext = __vite_ssr_import_8__.useSSRContext()
+  ;(ssrContext.modules || (ssrContext.modules = new Set())).add("pages/home/index.vue")
   return _sfc_setup ? _sfc_setup(props, ctx) : undefined
 }
-const __vite_ssr_import_7__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
+const __vite_ssr_import_9__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_7__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"E:/personal/vue/nuxt-vue-ssr-demo/components/common/banner.vue"]]);
+__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_9__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"F:/2021work/nuxt3/nuxt-vue-ssr-demo/pages/home/index.vue"]]);
 }
 
 
 // --------------------
 // Request: /node_modules/swiper/swiper.esm.js
 // Parents: 
+// - /pages/home/index.vue ($id_cfd7165b)
 // - /components/common/banner.vue ($id_945f3841)
 // Dependencies: 
 // - /node_modules/swiper/core/core.js ($id_413488a5)
@@ -2512,7 +2473,7 @@ Object.defineProperty(__vite_ssr_exports__, "EffectCards", { enumerable: true, c
 // Dependencies: 
 
 // --------------------
-const $id_413488a5 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/core/core.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/core/core.js".') })
+const $id_413488a5 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/core/core.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/core/core.js".') })
 
 
 // --------------------
@@ -2522,7 +2483,7 @@ const $id_413488a5 = (global, exports, importMeta, ssrImport, ssrDynamicImport, 
 // Dependencies: 
 
 // --------------------
-const $id_cdb0752d = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/virtual/virtual.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/virtual/virtual.js".') })
+const $id_cdb0752d = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/virtual/virtual.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/virtual/virtual.js".') })
 
 
 // --------------------
@@ -2532,7 +2493,7 @@ const $id_cdb0752d = (global, exports, importMeta, ssrImport, ssrDynamicImport, 
 // Dependencies: 
 
 // --------------------
-const $id_b79f366d = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/keyboard/keyboard.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/keyboard/keyboard.js".') })
+const $id_b79f366d = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/keyboard/keyboard.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/keyboard/keyboard.js".') })
 
 
 // --------------------
@@ -2542,7 +2503,7 @@ const $id_b79f366d = (global, exports, importMeta, ssrImport, ssrDynamicImport, 
 // Dependencies: 
 
 // --------------------
-const $id_ff1b73b2 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/mousewheel/mousewheel.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/mousewheel/mousewheel.js".') })
+const $id_ff1b73b2 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/mousewheel/mousewheel.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/mousewheel/mousewheel.js".') })
 
 
 // --------------------
@@ -2552,7 +2513,7 @@ const $id_ff1b73b2 = (global, exports, importMeta, ssrImport, ssrDynamicImport, 
 // Dependencies: 
 
 // --------------------
-const $id_3cbacc13 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/navigation/navigation.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/navigation/navigation.js".') })
+const $id_3cbacc13 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/navigation/navigation.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/navigation/navigation.js".') })
 
 
 // --------------------
@@ -2562,7 +2523,7 @@ const $id_3cbacc13 = (global, exports, importMeta, ssrImport, ssrDynamicImport, 
 // Dependencies: 
 
 // --------------------
-const $id_9d25ff48 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/pagination/pagination.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/pagination/pagination.js".') })
+const $id_9d25ff48 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/pagination/pagination.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/pagination/pagination.js".') })
 
 
 // --------------------
@@ -2572,7 +2533,7 @@ const $id_9d25ff48 = (global, exports, importMeta, ssrImport, ssrDynamicImport, 
 // Dependencies: 
 
 // --------------------
-const $id_b7c15973 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/scrollbar/scrollbar.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/scrollbar/scrollbar.js".') })
+const $id_b7c15973 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/scrollbar/scrollbar.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/scrollbar/scrollbar.js".') })
 
 
 // --------------------
@@ -2582,7 +2543,7 @@ const $id_b7c15973 = (global, exports, importMeta, ssrImport, ssrDynamicImport, 
 // Dependencies: 
 
 // --------------------
-const $id_2bc0dda6 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/parallax/parallax.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/parallax/parallax.js".') })
+const $id_2bc0dda6 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/parallax/parallax.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/parallax/parallax.js".') })
 
 
 // --------------------
@@ -2592,7 +2553,7 @@ const $id_2bc0dda6 = (global, exports, importMeta, ssrImport, ssrDynamicImport, 
 // Dependencies: 
 
 // --------------------
-const $id_b6094d1d = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/zoom/zoom.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/zoom/zoom.js".') })
+const $id_b6094d1d = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/zoom/zoom.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/zoom/zoom.js".') })
 
 
 // --------------------
@@ -2602,7 +2563,7 @@ const $id_b6094d1d = (global, exports, importMeta, ssrImport, ssrDynamicImport, 
 // Dependencies: 
 
 // --------------------
-const $id_27878f55 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/lazy/lazy.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/lazy/lazy.js".') })
+const $id_27878f55 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/lazy/lazy.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/lazy/lazy.js".') })
 
 
 // --------------------
@@ -2612,7 +2573,7 @@ const $id_27878f55 = (global, exports, importMeta, ssrImport, ssrDynamicImport, 
 // Dependencies: 
 
 // --------------------
-const $id_224f2e59 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/controller/controller.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/controller/controller.js".') })
+const $id_224f2e59 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/controller/controller.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/controller/controller.js".') })
 
 
 // --------------------
@@ -2622,7 +2583,7 @@ const $id_224f2e59 = (global, exports, importMeta, ssrImport, ssrDynamicImport, 
 // Dependencies: 
 
 // --------------------
-const $id_7fc5b0be = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/a11y/a11y.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/a11y/a11y.js".') })
+const $id_7fc5b0be = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/a11y/a11y.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/a11y/a11y.js".') })
 
 
 // --------------------
@@ -2632,7 +2593,7 @@ const $id_7fc5b0be = (global, exports, importMeta, ssrImport, ssrDynamicImport, 
 // Dependencies: 
 
 // --------------------
-const $id_f5205ad9 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/history/history.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/history/history.js".') })
+const $id_f5205ad9 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/history/history.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/history/history.js".') })
 
 
 // --------------------
@@ -2642,7 +2603,7 @@ const $id_f5205ad9 = (global, exports, importMeta, ssrImport, ssrDynamicImport, 
 // Dependencies: 
 
 // --------------------
-const $id_39f6940c = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/hash-navigation/hash-navigation.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/hash-navigation/hash-navigation.js".') })
+const $id_39f6940c = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/hash-navigation/hash-navigation.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/hash-navigation/hash-navigation.js".') })
 
 
 // --------------------
@@ -2652,7 +2613,7 @@ const $id_39f6940c = (global, exports, importMeta, ssrImport, ssrDynamicImport, 
 // Dependencies: 
 
 // --------------------
-const $id_11d42465 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/autoplay/autoplay.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/autoplay/autoplay.js".') })
+const $id_11d42465 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/autoplay/autoplay.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/autoplay/autoplay.js".') })
 
 
 // --------------------
@@ -2662,7 +2623,7 @@ const $id_11d42465 = (global, exports, importMeta, ssrImport, ssrDynamicImport, 
 // Dependencies: 
 
 // --------------------
-const $id_7f241531 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/thumbs/thumbs.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/thumbs/thumbs.js".') })
+const $id_7f241531 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/thumbs/thumbs.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/thumbs/thumbs.js".') })
 
 
 // --------------------
@@ -2672,7 +2633,7 @@ const $id_7f241531 = (global, exports, importMeta, ssrImport, ssrDynamicImport, 
 // Dependencies: 
 
 // --------------------
-const $id_adae43c1 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/free-mode/free-mode.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/free-mode/free-mode.js".') })
+const $id_adae43c1 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/free-mode/free-mode.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/free-mode/free-mode.js".') })
 
 
 // --------------------
@@ -2682,7 +2643,7 @@ const $id_adae43c1 = (global, exports, importMeta, ssrImport, ssrDynamicImport, 
 // Dependencies: 
 
 // --------------------
-const $id_be08b669 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/grid/grid.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/grid/grid.js".') })
+const $id_be08b669 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/grid/grid.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/grid/grid.js".') })
 
 
 // --------------------
@@ -2692,7 +2653,7 @@ const $id_be08b669 = (global, exports, importMeta, ssrImport, ssrDynamicImport, 
 // Dependencies: 
 
 // --------------------
-const $id_9ffdf8ef = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/manipulation/manipulation.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/manipulation/manipulation.js".') })
+const $id_9ffdf8ef = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/manipulation/manipulation.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/manipulation/manipulation.js".') })
 
 
 // --------------------
@@ -2702,7 +2663,7 @@ const $id_9ffdf8ef = (global, exports, importMeta, ssrImport, ssrDynamicImport, 
 // Dependencies: 
 
 // --------------------
-const $id_ed5701f6 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/effect-fade/effect-fade.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/effect-fade/effect-fade.js".') })
+const $id_ed5701f6 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/effect-fade/effect-fade.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/effect-fade/effect-fade.js".') })
 
 
 // --------------------
@@ -2712,7 +2673,7 @@ const $id_ed5701f6 = (global, exports, importMeta, ssrImport, ssrDynamicImport, 
 // Dependencies: 
 
 // --------------------
-const $id_03914d04 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/effect-cube/effect-cube.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/effect-cube/effect-cube.js".') })
+const $id_03914d04 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/effect-cube/effect-cube.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/effect-cube/effect-cube.js".') })
 
 
 // --------------------
@@ -2722,7 +2683,7 @@ const $id_03914d04 = (global, exports, importMeta, ssrImport, ssrDynamicImport, 
 // Dependencies: 
 
 // --------------------
-const $id_24c07261 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/effect-flip/effect-flip.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/effect-flip/effect-flip.js".') })
+const $id_24c07261 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/effect-flip/effect-flip.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/effect-flip/effect-flip.js".') })
 
 
 // --------------------
@@ -2732,7 +2693,7 @@ const $id_24c07261 = (global, exports, importMeta, ssrImport, ssrDynamicImport, 
 // Dependencies: 
 
 // --------------------
-const $id_0ea540eb = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/effect-coverflow/effect-coverflow.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/effect-coverflow/effect-coverflow.js".') })
+const $id_0ea540eb = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/effect-coverflow/effect-coverflow.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/effect-coverflow/effect-coverflow.js".') })
 
 
 // --------------------
@@ -2742,7 +2703,7 @@ const $id_0ea540eb = (global, exports, importMeta, ssrImport, ssrDynamicImport, 
 // Dependencies: 
 
 // --------------------
-const $id_3ab2d8b1 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/effect-creative/effect-creative.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/effect-creative/effect-creative.js".') })
+const $id_3ab2d8b1 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/effect-creative/effect-creative.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/effect-creative/effect-creative.js".') })
 
 
 // --------------------
@@ -2752,22 +2713,24 @@ const $id_3ab2d8b1 = (global, exports, importMeta, ssrImport, ssrDynamicImport, 
 // Dependencies: 
 
 // --------------------
-const $id_597d31c2 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/effect-cards/effect-cards.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/modules/effect-cards/effect-cards.js".') })
+const $id_597d31c2 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/effect-cards/effect-cards.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/modules/effect-cards/effect-cards.js".') })
 
 
 // --------------------
 // Request: /node_modules/swiper/vue/swiper-vue.js
 // Parents: 
+// - /pages/home/index.vue ($id_cfd7165b)
 // - /components/common/banner.vue ($id_945f3841)
 // Dependencies: 
 
 // --------------------
-const $id_72e3deca = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/vue/swiper-vue.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/swiper/vue/swiper-vue.js".') })
+const $id_72e3deca = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/vue/swiper-vue.js').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/swiper/vue/swiper-vue.js".') })
 
 
 // --------------------
 // Request: /node_modules/swiper/swiper.min.css
 // Parents: 
+// - /pages/home/index.vue ($id_cfd7165b)
 // - /components/common/banner.vue ($id_945f3841)
 // Dependencies: 
 
@@ -2778,9 +2741,21 @@ __vite_ssr_exports__.default = "/**\n * Swiper 7.3.4\n * Most modern mobile touc
 
 
 // --------------------
+// Request: /pages/home/index.vue?vue&type=style&index=0&lang.scss
+// Parents: 
+// - /pages/home/index.vue ($id_cfd7165b)
+// Dependencies: 
+
+// --------------------
+const $id_d59ee1e0 = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+__vite_ssr_exports__.default = ".main-content .banner .banner-item {\n  height: 300px;\n  background-size: 100% 100%;\n  background-repeat: no-repeat;\n  background-position: 0 0;\n}";
+}
+
+
+// --------------------
 // Request: /pages/my/index.vue
 // Parents: 
-// - /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/routes.mjs ($id_86363a5f)
+// - /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/routes.mjs ($id_070944bf)
 // Dependencies: 
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // - /@id/plugin-vue:export-helper ($id_bbb863c1)
@@ -2801,7 +2776,7 @@ _sfc_main.setup = (props, ctx) => {
 };
 const __vite_ssr_import_1__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_1__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "E:/personal/vue/nuxt-vue-ssr-demo/pages/my/index.vue"]]);
+__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_1__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "F:/2021work/nuxt3/nuxt-vue-ssr-demo/pages/my/index.vue"]]);
 ;
 }
 
@@ -2809,7 +2784,7 @@ __vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_1__.default(_sf
 // --------------------
 // Request: /node_modules/@nuxt/nitro/dist/runtime/app/nitro.client.mjs
 // Parents: 
-// - /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/plugins/server.mjs ($id_d31326cf)
+// - /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/plugins/server.mjs ($id_ec96a599)
 // Dependencies: 
 // - /node_modules/ohmyfetch/dist/index.mjs ($id_780217c4)
 // --------------------
@@ -2833,19 +2808,19 @@ __vite_ssr_exports__.default = () => {}
 // Dependencies: 
 
 // --------------------
-const $id_780217c4 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///E:/personal/vue/nuxt-vue-ssr-demo/node_modules/ohmyfetch/dist/index.mjs').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "E:/personal/vue/nuxt-vue-ssr-demo/node_modules/ohmyfetch/dist/index.mjs".') })
+const $id_780217c4 = (global, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) => import('file:///F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/ohmyfetch/dist/index.mjs').then(r => { exports.default = r.default; ssrExportAll(r) }).catch(e => { console.error(e); throw new Error('[vite dev] Error loading external "F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/ohmyfetch/dist/index.mjs".') })
 
 
 // --------------------
-// Request: /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/components.mjs
+// Request: /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/components.mjs
 // Parents: 
-// - /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/plugins/server.mjs ($id_d31326cf)
+// - /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/plugins/server.mjs ($id_ec96a599)
 // Dependencies: 
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // - /components/common/banner.vue ($id_945f3841)
 // - /components/common/Footer.vue ($id_f219ac30)
 // --------------------
-const $id_377cfd25 = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const $id_d4907e5f = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
 
@@ -2865,9 +2840,135 @@ __vite_ssr_exports__.default = function (nuxtApp) {
 
 
 // --------------------
+// Request: /components/common/banner.vue
+// Parents: 
+// - /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/components.mjs ($id_d4907e5f)
+// Dependencies: 
+// - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
+// - /node_modules/swiper/swiper.esm.js ($id_d1eb9a9e)
+// - /node_modules/swiper/vue/swiper-vue.js ($id_72e3deca)
+// - /node_modules/swiper/swiper.min.css ($id_9d54fdba)
+// - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
+// - /@id/plugin-vue:export-helper ($id_bbb863c1)
+// --------------------
+const $id_945f3841 = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+
+
+  // import Swiper core and required modules
+  const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/swiper/swiper.esm.js");
+
+
+  // Import Swiper Vue.js components
+  const __vite_ssr_import_2__ = await __vite_ssr_import__("/node_modules/swiper/vue/swiper-vue.js");
+
+
+  // Import Swiper styles
+  const __vite_ssr_import_3__ = await __vite_ssr_import__("/node_modules/swiper/swiper.min.css");
+
+  // Import Swiper styles
+  const _sfc_main = {
+    props: {
+      imgList : {
+        type: Array,
+        require: true
+      }
+    },
+    components: {
+      Swiper: __vite_ssr_import_2__.Swiper,
+      SwiperSlide: __vite_ssr_import_2__.SwiperSlide,
+    },
+    setup() {
+      const onSwiper = (swiper) => {
+        console.log(swiper);
+      };
+      const onSlideChange = () => {
+        console.log('slide change');
+      };
+      return {
+        onSwiper,
+        onSlideChange,
+        modules: [__vite_ssr_import_1__.Navigation, __vite_ssr_import_1__.Pagination, __vite_ssr_import_1__.Scrollbar, __vite_ssr_import_1__.A11y],
+      };
+    },
+  };
+
+const __vite_ssr_import_4__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+
+const __vite_ssr_import_5__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
+
+
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  const _component_swiper = __vite_ssr_import_4__.resolveComponent("swiper")
+  const _component_swiper_slide = __vite_ssr_import_4__.resolveComponent("swiper-slide")
+
+  _push(__vite_ssr_import_5__.ssrRenderComponent(_component_swiper, __vite_ssr_import_4__.mergeProps({
+    modules: $setup.modules,
+    navigation: "",
+    scrollbar: { draggable: true }
+  }, _attrs), {
+    default: __vite_ssr_import_4__.withCtx((_, _push, _parent, _scopeId) => {
+      if (_push) {
+        _push(`<!--[-->`)
+        __vite_ssr_import_5__.ssrRenderList($props.imgList, (item, i) => {
+          _push(__vite_ssr_import_5__.ssrRenderComponent(_component_swiper_slide, { key: i }, {
+            default: __vite_ssr_import_4__.withCtx((_, _push, _parent, _scopeId) => {
+              if (_push) {
+                _push(`<div style="${
+                  __vite_ssr_import_5__.ssrRenderStyle({item})
+                }"${
+                  _scopeId
+                }></div>`)
+              } else {
+                return [
+                  __vite_ssr_import_4__.createVNode("div", {
+                    style: {item}
+                  }, null, 4 /* STYLE */)
+                ]
+              }
+            }),
+            _: 2 /* DYNAMIC */
+          }, _parent, _scopeId))
+        })
+        _push(`<!--]-->`)
+      } else {
+        return [
+          (__vite_ssr_import_4__.openBlock(true), __vite_ssr_import_4__.createBlock(__vite_ssr_import_4__.Fragment, null, __vite_ssr_import_4__.renderList($props.imgList, (item, i) => {
+            return (__vite_ssr_import_4__.openBlock(), __vite_ssr_import_4__.createBlock(_component_swiper_slide, { key: i }, {
+              default: __vite_ssr_import_4__.withCtx(() => [
+                __vite_ssr_import_4__.createVNode("div", {
+                  style: {item}
+                }, null, 4 /* STYLE */)
+              ]),
+              _: 2 /* DYNAMIC */
+            }, 1024 /* DYNAMIC_SLOTS */))
+          }), 128 /* KEYED_FRAGMENT */))
+        ]
+      }
+    }),
+    _: 1 /* STABLE */
+  }, _parent))
+}
+
+
+const __vite_ssr_import_6__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+
+const _sfc_setup = _sfc_main.setup
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = __vite_ssr_import_6__.useSSRContext()
+  ;(ssrContext.modules || (ssrContext.modules = new Set())).add("components/common/banner.vue")
+  return _sfc_setup ? _sfc_setup(props, ctx) : undefined
+}
+const __vite_ssr_import_7__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
+
+__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_7__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"F:/2021work/nuxt3/nuxt-vue-ssr-demo/components/common/banner.vue"]]);
+}
+
+
+// --------------------
 // Request: /components/common/Footer.vue
 // Parents: 
-// - /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/components.mjs ($id_377cfd25)
+// - /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/components.mjs ($id_d4907e5f)
 // - /app.vue ($id_2b46e842)
 // Dependencies: 
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
@@ -2947,7 +3048,7 @@ _sfc_main.setup = (props, ctx) => {
 }
 const __vite_ssr_import_5__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_5__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"E:/personal/vue/nuxt-vue-ssr-demo/components/common/Footer.vue"]]);
+__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_5__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"F:/2021work/nuxt3/nuxt-vue-ssr-demo/components/common/Footer.vue"]]);
 }
 
 
@@ -2964,13 +3065,13 @@ __vite_ssr_exports__.default = ".com-footer {\n  position: fixed;\n  bottom: 0;\
 
 
 // --------------------
-// Request: /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/root-component.mjs
+// Request: /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/root-component.mjs
 // Parents: 
 // - /node_modules/nuxt3/dist/app/bootstrap.mjs ($id_fef466a9)
 // Dependencies: 
 // - /node_modules/nuxt3/dist/app/components/nuxt-root.vue ($id_f8564e04)
 // --------------------
-const $id_15926c23 = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const $id_bb42af83 = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/nuxt3/dist/app/components/nuxt-root.vue");
 
 Object.defineProperty(__vite_ssr_exports__, "default", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_0__.default }});;
@@ -2980,7 +3081,7 @@ Object.defineProperty(__vite_ssr_exports__, "default", { enumerable: true, confi
 // --------------------
 // Request: /node_modules/nuxt3/dist/app/components/nuxt-root.vue
 // Parents: 
-// - /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/root-component.mjs ($id_15926c23)
+// - /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/root-component.mjs ($id_bb42af83)
 // Dependencies: 
 // - /node_modules/nuxt3/dist/app/index.mjs ($id_d8c2af0f)
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
@@ -3031,18 +3132,18 @@ _sfc_main.setup = (props, ctx) => {
 }
 const __vite_ssr_import_4__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_4__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"E:/personal/vue/nuxt-vue-ssr-demo/node_modules/nuxt3/dist/app/components/nuxt-root.vue"]]);
+__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_4__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/nuxt3/dist/app/components/nuxt-root.vue"]]);
 }
 
 
 // --------------------
-// Request: /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/app-component.mjs
+// Request: /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/app-component.mjs
 // Parents: 
 // - /node_modules/nuxt3/dist/app/bootstrap.mjs ($id_fef466a9)
 // Dependencies: 
 // - /app.vue ($id_2b46e842)
 // --------------------
-const $id_f3e646fc = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const $id_3766032f = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/app.vue");
 
 Object.defineProperty(__vite_ssr_exports__, "default", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_0__.default }});;
@@ -3052,7 +3153,7 @@ Object.defineProperty(__vite_ssr_exports__, "default", { enumerable: true, confi
 // --------------------
 // Request: /app.vue
 // Parents: 
-// - /@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/app-component.mjs ($id_f3e646fc)
+// - /@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/app-component.mjs ($id_3766032f)
 // Dependencies: 
 // - /components/common/Footer.vue ($id_f219ac30)
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
@@ -3090,13 +3191,13 @@ _sfc_main.setup = (props, ctx) => {
 };
 const __vite_ssr_import_4__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_4__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "E:/personal/vue/nuxt-vue-ssr-demo/app.vue"]]);
+__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_4__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "F:/2021work/nuxt3/nuxt-vue-ssr-demo/app.vue"]]);
 ;
 }
 
 
 const __modules__ = {
- 'E:/personal/vue/nuxt-vue-ssr-demo/node_modules/nuxt3/dist/app/entry': $id_bd2a457b,
+ 'F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/nuxt3/dist/app/entry': $id_b5a14054,
  '/node_modules/nuxt3/dist/app/bootstrap.mjs': $id_fef466a9,
  '/node_modules/vue/dist/vue.cjs.js': $id_60f0615f,
  '/node_modules/nuxt3/dist/app/index.mjs': $id_d8c2af0f,
@@ -3117,10 +3218,10 @@ const __modules__ = {
  '/node_modules/h3/dist/index.mjs': $id_57d7ded6,
  '/node_modules/destr/dist/index.mjs': $id_03d15ecd,
  '/node_modules/nuxt3/dist/app/composables/ssr.mjs': $id_4d0dc923,
- '/@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/css.mjs': $id_61f758b2,
+ '/@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/css.mjs': $id_a62e50ec,
  '/node_modules/element-plus/dist/index.css': $id_93984529,
  '/assets/css/reset.css': $id_9c912bac,
- '/@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/plugins/server.mjs': $id_d31326cf,
+ '/@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/plugins/server.mjs': $id_ec96a599,
  '/node_modules/nuxt3/dist/app/plugins/preload.server.mjs': $id_b9f3c557,
  '/node_modules/nuxt3/dist/meta/runtime/lib/vueuse-head.plugin.mjs': $id_cbe5172d,
  '/node_modules/@vueuse/head/dist/index.mjs': $id_c032264e,
@@ -3128,18 +3229,17 @@ const __modules__ = {
  '/node_modules/nuxt3/dist/meta/runtime/components.mjs': $id_94744df3,
  '/node_modules/nuxt3/dist/meta/runtime/composables.mjs': $id_ca9295be,
  '/node_modules/@vue/shared/dist/shared.cjs.js': $id_852b06a2,
- '/@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/meta.config.mjs': $id_a3d3d29e,
+ '/@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/meta.config.mjs': $id_0096ed21,
  '/node_modules/nuxt3/dist/pages/runtime/router.mjs': $id_a4d6cb5b,
  '/node_modules/nuxt3/dist/pages/runtime/nested-page.vue': $id_c268603a,
  '/node_modules/vue/server-renderer/index.js': $id_b215fa1c,
  '/@id/plugin-vue:export-helper': $id_bbb863c1,
  '/node_modules/nuxt3/dist/pages/runtime/page.vue': $id_10628d40,
  '/node_modules/nuxt3/dist/pages/runtime/layout.mjs': $id_9b68c93f,
- '/@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/layouts.mjs': $id_fcc36b71,
- '/@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/routes.mjs': $id_86363a5f,
+ '/@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/layouts.mjs': $id_21eaddf1,
+ '/@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/routes.mjs': $id_070944bf,
  '/pages/find/index.vue': $id_800170aa,
  '/pages/home/index.vue': $id_cfd7165b,
- '/components/common/banner.vue': $id_945f3841,
  '/node_modules/swiper/swiper.esm.js': $id_d1eb9a9e,
  '/node_modules/swiper/core/core.js': $id_413488a5,
  '/node_modules/swiper/modules/virtual/virtual.js': $id_cdb0752d,
@@ -3168,15 +3268,17 @@ const __modules__ = {
  '/node_modules/swiper/modules/effect-cards/effect-cards.js': $id_597d31c2,
  '/node_modules/swiper/vue/swiper-vue.js': $id_72e3deca,
  '/node_modules/swiper/swiper.min.css': $id_9d54fdba,
+ '/pages/home/index.vue?vue&type=style&index=0&lang.scss': $id_d59ee1e0,
  '/pages/my/index.vue': $id_61b42ae7,
  '/node_modules/@nuxt/nitro/dist/runtime/app/nitro.client.mjs': $id_7b587af2,
  '/node_modules/ohmyfetch/dist/index.mjs': $id_780217c4,
- '/@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/components.mjs': $id_377cfd25,
+ '/@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/components.mjs': $id_d4907e5f,
+ '/components/common/banner.vue': $id_945f3841,
  '/components/common/Footer.vue': $id_f219ac30,
  '/components/common/Footer.vue?vue&type=style&index=0&lang.scss': $id_0119546f,
- '/@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/root-component.mjs': $id_15926c23,
+ '/@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/root-component.mjs': $id_bb42af83,
  '/node_modules/nuxt3/dist/app/components/nuxt-root.vue': $id_f8564e04,
- '/@id/__x00__virtual:E:/personal/vue/nuxt-vue-ssr-demo/.nuxt/app-component.mjs': $id_f3e646fc,
+ '/@id/__x00__virtual:F:/2021work/nuxt3/nuxt-vue-ssr-demo/.nuxt/app-component.mjs': $id_3766032f,
  '/app.vue': $id_2b46e842
 }
 
@@ -3254,4 +3356,4 @@ async function __instantiateModule__(url, urlStack) {
 }
 
 
-export default await __ssrLoadModule__('E:/personal/vue/nuxt-vue-ssr-demo/node_modules/nuxt3/dist/app/entry')
+export default await __ssrLoadModule__('F:/2021work/nuxt3/nuxt-vue-ssr-demo/node_modules/nuxt3/dist/app/entry')
