@@ -2322,7 +2322,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
     }),
     _: 1 /* STABLE */
   }, _parent))
-  _push(` 吴圆圆是个猪 </div><div class="new-good-preview"></div></div><!--]-->`)
+  _push(` 吴圆圆是个猪, 是王博书唯一的猪 </div><div class="new-good-preview"></div></div><!--]-->`)
 }
 
 const __vite_ssr_import_7__ = await __vite_ssr_import__("/pages/home/index.vue?vue&type=style&index=0&lang.scss");

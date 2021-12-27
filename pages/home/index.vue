@@ -16,7 +16,8 @@
             <div class="banner-item" :style="{backgroundImage: `url('${item.url}')`}"></div>
           </swiper-slide>
         </swiper>
-        吴圆圆是个猪
+        吴圆圆是个猪,
+        是王博书唯一的猪
       </div>
       <div class="new-good-preview">
         
