@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-view></router-view>
+    <NuxtPage></NuxtPage>
     <common-footer></common-footer>
   </div>
 </template>

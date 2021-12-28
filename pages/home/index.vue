@@ -1,9 +1,11 @@
 <template>
     <!-- 主页 -->
     <header>
-      <div class="location">当前位置：{{location}} 
-        <!-- <el-icon><location /></el-icon>  -->
-        </div>
+      <div class="location"  @click="showMap" >当前位置：{{location}}
+        <!-- <environment-outlined @click="showMap=true" /> -->
+        <img src="/imgs/logo.png" width="100%" height="100%" alt="">
+      </div>
+      <common-map @acceptPosition="acceptPosition" v-show="mapVisible" ref="Map"></common-map>
     </header>
     <div class="main-content">
       <div class="banner">
@@ -36,11 +38,10 @@ import {ref} from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import 'swiper/css';
-// import { ElIcon } from 'element-plus'
-// import { Location } from '@element-plus/icons-vue/dist/lib/location.vue'
+
 export default {
   components: {
-    Swiper, SwiperSlide,// ElIcon, Location
+    Swiper, SwiperSlide,
   },
   setup() {
     let bannerList = ref([]),
@@ -48,32 +49,32 @@ export default {
     setTimeout(()=> {
       bannerList.value = [
         {
-          url: '/assets/imgs/bed/bed (1).jpg'
+          url: '/imgs/bed/bed1.jpg'
         },
         {
-          url: '/assets/imgs/bed/bed (2).jpg'
+          url: '/imgs/bed/bed2.jpg'
         },
         {
-          url: '/assets/imgs/bed/bed (3).jpg'
+          url: '/imgs/bed/bed3.jpg'
         },
       ]
       newGoogsList.value = [
         {
-          url: '/assets/imgs/sofa/sofa (1).jpg',
+          url: '/imgs/sofa/sofa1.jpg',
           alt: '美家沙发',
           description: '美家沙发',
           prcie: 3600,
           sealCount: 259,
         },
         {
-          url: '/assets/imgs/sofa/sofa (2).jpg',
+          url: '/imgs/sofa/sofa2.jpg',
           alt: '美家沙发',
           description: '美家沙发',
           prcie: 5700,
           sealCount: 1299,
         },
         {
-          url: '/assets/imgs/sofa/sofa (3).jpg',
+          url: '/imgs/sofa/sofa3.jpg',
           alt: '美家沙发',
           description: '美家沙发',
           prcie: 5700,
@@ -93,11 +94,27 @@ export default {
       modules: [Navigation, Pagination, Scrollbar, A11y],
       bannerList,
       newGoogsList,
-      location: '',
     };
   },
+  data(){
+    return {
+      location: {},
+      mapVisible: false
+    }
+  },
   mounted(){
-    console.log(this.bannerList);
+
+  },
+  methods: {
+    acceptPosition(position){
+      
+    },
+    showMap(){
+      console.log('showMap');
+      this.mapVisible = true;
+      let mp = this.$refs.Map.initMap();
+      console.log(mp);
+    }
   }
 }
 </script>
@@ -109,6 +126,24 @@ export default {
     background-size: 100% 100%;
     background-position: 0 0;
     background-repeat: no-repeat;
+  }
+
+  .new-goods-preview{
+    margin-top: 20px;
+    ul{
+      display: flex;
+      box-sizing: border-box;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-content: flex-start;
+      margin: 0 4%;
+      li{
+        width: 47.9%;
+        border-radius: 4px;
+        box-shadow: 2px 6px 2px #f3f3f3;
+        margin-bottom: 10px;
+      }
+    }
   }
 }
 </style>

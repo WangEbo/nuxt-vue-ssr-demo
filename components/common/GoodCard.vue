@@ -19,6 +19,10 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+.good-detail{
+  img{
+    width: 100%;
+  }
+}
 </style>
