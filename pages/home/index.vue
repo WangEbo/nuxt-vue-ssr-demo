@@ -11,7 +11,7 @@
       <div class="banner">
         <swiper
           :modules="modules"
-          navigation
+          :hashNavigation="true"
           :scrollbar="{ draggable: true }"
           @swiper="onSwiper"
           @slideChange="onSlideChange"
@@ -33,19 +33,20 @@
     </div>
 </template>
 
-<script>
-import {ref} from 'vue'
+<script lang="ts">
+import { defineComponent, ref} from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import 'swiper/css';
+import { GoodItem, BannerItem } from '../../types' 
 
-export default {
+export default defineComponent({
   components: {
     Swiper, SwiperSlide,
   },
   setup() {
-    let bannerList = ref([]),
-        newGoogsList = ref([]);
+    let bannerList = ref([] as BannerItem[]),
+        newGoogsList = ref([] as GoodItem[]);
     setTimeout(()=> {
       bannerList.value = [
         {
@@ -68,7 +69,6 @@ export default {
         },
         {
           url: '/imgs/sofa/sofa2.jpg',
-          alt: '美家沙发',
           description: '美家沙发',
           prcie: 5700,
           sealCount: 1299,
@@ -100,7 +100,7 @@ export default {
     return {
       location: {},
       mapVisible: false,
-      logoUrl: '/imgs/logo.png'
+      logoUrl: '/imgs/logo.png',
     }
   },
   mounted(){
@@ -117,7 +117,7 @@ export default {
       console.log(mp);
     }
   }
-}
+})
 </script>
 
 <style lang="scss">

@@ -8,15 +8,17 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { GoodItem } from '../../types'
+import { defineComponent, PropType } from 'vue'
+export default defineComponent({
   props: {
     detail: {
-      type: Object,
+      type: Object as PropType<GoodItem>,
       require: true
     }
   }
-}
+})
 </script>
 
 <style lang="scss">
