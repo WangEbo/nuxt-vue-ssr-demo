@@ -3,7 +3,7 @@
     <header>
       <div class="location"  @click="showMap" >当前位置：{{location}}
         <!-- <environment-outlined @click="showMap=true" /> -->
-        <img src="/imgs/logo.png" width="100%" height="100%" alt="">
+        <img :src="logoUrl" width="100%" height="100%" alt="">
       </div>
       <common-map @acceptPosition="acceptPosition" v-show="mapVisible" ref="Map"></common-map>
     </header>
@@ -99,7 +99,8 @@ export default {
   data(){
     return {
       location: {},
-      mapVisible: false
+      mapVisible: false,
+      logoUrl: '/imgs/logo.png'
     }
   },
   mounted(){

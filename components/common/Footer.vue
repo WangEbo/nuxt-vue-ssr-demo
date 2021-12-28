@@ -3,7 +3,6 @@
   <footer class="com-footer">
     <ul class="footer-ul">
       <li v-for="(item, i) in list" :key="i">
-    
         <nuxt-link :to="item.page">{{item.text}}</nuxt-link>
       </li>
     </ul>
@@ -40,6 +39,7 @@ export default {
 <style lang="scss">
   .com-footer{
     position: fixed;
+    background-color: #fff;
     bottom: 0;
     z-index: 9999;
     box-shadow: 6px 0px 3px #c6c6c6;

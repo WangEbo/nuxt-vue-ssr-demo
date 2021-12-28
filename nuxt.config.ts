@@ -10,6 +10,7 @@ import { defineNuxtConfig } from 'nuxt3'
 // console.log(antdPlugin);
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
+  
   meta: {
     script: [
       // { src: 'https://api.map.baidu.com/api?v=3.0&ak=KTqh50F1A96I0reEvuVuiVEmAOyMhc5m&callback=initialize' },
