@@ -5,8 +5,8 @@
     "dev": "nuxi dev",
     "build": "npx nuxt build",
     "start": "cross-env NUXT_PORT=3000 NUXT_HOST=0.0.0.0 node .output/server/index.mjs",
-    "server": "cross-env NUXT_PORT=3000 NUXT_HOST=0.0.0.0 pm2 start .output/server/index.mjs",
-    "stop": "pm2 stop all"
+    "prod": "pm2 start ecosystem.config.js --only prod",
+    "stop": "pm2 stop ecosystem.config.js"
   },
   "devDependencies": {
     "nuxt3": "latest",
