@@ -6,8 +6,10 @@
     @swiper="onSwiper"
     @slideChange="onSlideChange"
   >
-    <swiper-slide v-for="(item, i) in imgList" :key="i">
-      <div :style="{item}"></div>
+    <swiper-slide v-for="(item, i) in bannerList" :key="i">
+      <div class="banner-img">
+        <img style="height: 100%; width: 100%;" :src="item.url" alt="">
+      </div>
     </swiper-slide>
   </swiper>
 </template>
@@ -23,7 +25,7 @@
   // Import Swiper styles
   export default {
     props: {
-      imgList : {
+      bannerList : {
         type: Array,
         require: true
       }
@@ -45,5 +47,8 @@
         modules: [Navigation, Pagination, Scrollbar, A11y],
       };
     },
+    mounted(){
+      console.log(this);
+    }
   };
 </script>
