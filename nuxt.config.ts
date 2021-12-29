@@ -13,7 +13,7 @@ export default defineNuxtConfig({
   },
   css: [
     '@/assets/css/reset.css', //通用重置样式
-    '@/assets/css/icon-fonts/iconfonts.css',//iconfonts 
+    '@/assets/css/icon-fonts/iconfont.css',//iconfonts 
   ],
   modules: [
 
