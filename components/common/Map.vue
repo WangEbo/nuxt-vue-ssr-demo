@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { getLocation } from '../../utils/common'
 import { ref } from 'vue'
 

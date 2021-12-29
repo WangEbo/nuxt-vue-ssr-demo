@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3098274 */
+  src: url('iconfont.woff2?t=1640770973136') format('woff2'),
+       url('iconfont.woff?t=1640770973136') format('woff'),
+       url('iconfont.ttf?t=1640770973136') format('truetype'),
+       url('iconfont.svg?t=1640770973136#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-shoucang:before {
+  content: "\e60c";
+}
+
+.icon-shop-car:before {
+  content: "\e64e";
+}
+
+.icon-gouwuchekong:before {
+  content: "\e601";
+}
+
+.icon-wode-wode:before {
+  content: "\e60d";
+}
+
+.icon-faxian1:before {
+  content: "\e86c";
+}
+
+.icon-locationfill:before {
+  content: "\e650";
+}
+
+.icon-homefill:before {
+  content: "\e6bb";
+}
+
+.icon-quanbudingdan:before {
+  content: "\e600";
+}
+
+.icon-wode:before {
+  content: "\e75e";
+}
+
+.icon-faxian:before {
+  content: "\e608";
+}
+
+.icon-search:before {
+  content: "\e82e";
+}
+

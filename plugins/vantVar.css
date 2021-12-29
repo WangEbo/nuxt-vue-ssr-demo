@@ -1,0 +1,5 @@
+/* vant变量修改 */
+:root {
+  --van-cell-vertical-padding: 0;
+  --van-cell-horizontal-padding: 0;
+}

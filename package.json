@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "cross-env": "^7.0.3",
-    "swiper": "^7.3.4"
+    "swiper": "^7.3.4",
+    "vant": "^3.3.7"
   }
 }

@@ -1,13 +1,7 @@
 import { defineNuxtConfig } from 'nuxt3'
-// import Components from 'unplugin-vue-components/vite'
-// import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 
 
-// debugger
-// const antdPlugin = Components({
-//   resolvers: [AntDesignVueResolver()],
-// });
-// console.log(antdPlugin);
+
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
   
@@ -18,7 +12,8 @@ export default defineNuxtConfig({
     ]
   },
   css: [
-    '@/assets/css/reset.css'
+    '@/assets/css/reset.css', //通用重置样式
+    '@/assets/css/icon-fonts/iconfonts.css',//iconfonts 
   ],
   modules: [
 

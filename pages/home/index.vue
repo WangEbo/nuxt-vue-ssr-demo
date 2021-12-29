@@ -1,21 +1,12 @@
 <template>
-    <!-- 主页 -->
+  <!-- 主页 -->
+  <div class="home">
     <header>
-      <div class="location"  @click="showMap" >当前位置：{{location}}
-        <!-- <environment-outlined @click="showMap=true" /> -->
-        <img :src="logoUrl" width="100%" height="100%" alt="">
-      </div>
-      <common-map @acceptPosition="acceptPosition" v-show="mapVisible" ref="Map"></common-map>
+      <common-search-bar></common-search-bar>
     </header>
     <div class="main-content">
       <div class="banner">
-        <swiper
-          :modules="modules"
-          :hashNavigation="true"
-          :scrollbar="{ draggable: true }"
-          @swiper="onSwiper"
-          @slideChange="onSlideChange"
-        >
+        <swiper :modules="modules" :hashNavigation="true" :scrollbar="{ draggable: true }" @swiper="onSwiper" @slideChange="onSlideChange">
           <swiper-slide v-for="(item, i) in bannerList" :key="i">
             <div class="banner-img">
               <img style="height: 100%; width: 100%;" :src="item.url" alt="">
@@ -31,62 +22,65 @@
         </ul>
       </div>
     </div>
+  </div>
+
 </template>
 
 <script lang="ts">
-import { defineComponent, ref} from 'vue'
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-import 'swiper/css';
-import { GoodItem, BannerItem } from '../../types' 
+import { defineComponent, ref } from "vue";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import "swiper/css";
+import { GoodItem, BannerItem } from "~~/types";
 
 export default defineComponent({
   components: {
-    Swiper, SwiperSlide,
+    Swiper,
+    SwiperSlide,
   },
   setup() {
     let bannerList = ref([] as BannerItem[]),
-        newGoogsList = ref([] as GoodItem[]);
-    setTimeout(()=> {
+      newGoogsList = ref([] as GoodItem[]);
+    setTimeout(() => {
       bannerList.value = [
         {
-          url: '/imgs/bed/bed1.jpg'
+          url: "/imgs/bed/bed1.jpg",
         },
         {
-          url: '/imgs/bed/bed2.jpg'
+          url: "/imgs/bed/bed2.jpg",
         },
         {
-          url: '/imgs/bed/bed3.jpg'
+          url: "/imgs/bed/bed3.jpg",
         },
-      ]
+      ];
       newGoogsList.value = [
         {
-          url: '/imgs/sofa/sofa1.jpg',
-          alt: '美家沙发',
-          description: '美家沙发',
+          url: "/imgs/sofa/sofa1.jpg",
+          alt: "美家沙发",
+          description: "美家沙发",
           prcie: 3600,
           sealCount: 259,
         },
         {
-          url: '/imgs/sofa/sofa2.jpg',
-          description: '美家沙发',
+          url: "/imgs/sofa/sofa2.jpg",
+          description: "美家沙发",
           prcie: 5700,
           sealCount: 1299,
         },
         {
-          url: '/imgs/sofa/sofa3.jpg',
-          alt: '美家沙发',
-          description: '美家沙发',
+          url: "/imgs/sofa/sofa3.jpg",
+          alt: "美家沙发",
+          description: "美家沙发",
           prcie: 5700,
           sealCount: 11888,
         },
-      ]
-    },500)
+      ];
+    }, 500);
     const onSwiper = (swiper) => {
       console.log(swiper);
     };
     const onSlideChange = () => {
-      console.log('slide change');
+      console.log("slide change");
     };
     return {
       onSwiper,
@@ -96,49 +90,58 @@ export default defineComponent({
       newGoogsList,
     };
   },
-  data(){
+  data() {
     return {
       location: {},
       mapVisible: false,
-      logoUrl: '/imgs/logo.png',
-    }
+      logoUrl: "/imgs/logo.png",
+    };
   },
-  mounted(){
-
-  },
+  mounted() {},
   methods: {
-    acceptPosition(position){
-      
-    },
-    showMap(){
-      console.log('showMap');
+    acceptPosition(position) {},
+    showMap() {
+      console.log("showMap");
       this.mapVisible = true;
       let mp = this.$refs.Map.initMap();
       console.log(mp);
-    }
-  }
-})
+    },
+  },
+});
 </script>
 
 <style lang="scss">
-.main-content{
-  .banner-img{
+.home{
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  header{
+    margin-top: 20px;
+  }
+}
+
+.main-content {
+  flex: 1;
+  margin: 20px 0 60px;
+  .banner-img {
     height: 300px;
     background-size: 100% 100%;
     background-position: 0 0;
     background-repeat: no-repeat;
   }
 
-  .new-goods-preview{
+  .new-goods-preview {
     margin-top: 20px;
-    ul{
+    ul {
       display: flex;
       box-sizing: border-box;
       flex-wrap: wrap;
       justify-content: space-between;
       align-content: flex-start;
       margin: 0 4%;
-      li{
+      li {
         width: 47.9%;
         border-radius: 4px;
         box-shadow: 2px 6px 2px #f3f3f3;

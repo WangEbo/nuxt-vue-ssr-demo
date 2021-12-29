@@ -3,7 +3,9 @@
   <footer class="com-footer">
     <ul class="footer-ul">
       <li v-for="(item, i) in list" :key="i">
-        <nuxt-link :to="item.page">{{item.text}}</nuxt-link>
+        <nuxt-link :to="item.page">
+          <mh-icon :icon="item.icon"></mh-icon>
+        </nuxt-link>
       </li>
     </ul>
   </footer>
@@ -17,17 +19,22 @@ export default {
       list: [
         {
           text: '首页',
-          icon: '',
+          icon: 'icon-homefill',
           page: '/home',
         },
         {
           text: '发现',
-          icon: '',
+          icon: 'icon-faxian1',
           page: '/find',
         },
         {
+          text: '购物车',
+          icon: 'icon-shop-car',
+          page: '/shopCar',
+        },
+        {
           text: '我的',
-          icon: '',
+          icon: 'icon-wode-wode',
           page: '/my',
         },
       ]
@@ -54,8 +61,19 @@ export default {
         flex: 1;
         line-height: 60px;
         text-align: center;
+        a{
+          font-size: 22px;
+          color: #3b3a3a;
+        }
+        .router-link-active:visited{
+          color: unset;
+        }
+        .router-link-active.router-link-exact-active{
+          color: #3c72f0;
+        }
       }
     }
-    
   }
+
+  
 </style>
