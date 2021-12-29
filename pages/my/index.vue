@@ -59,6 +59,7 @@ export default defineComponent({
 
 <style lang="scss">
 .my{
+  padding: 20px;
   .opt-bar{
     ul{
       display: flex;

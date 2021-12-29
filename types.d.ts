@@ -8,7 +8,8 @@ export type GoodItem = {
   alt?: string;
   description: string;
   prcie: number
-  sealCount: number
+  sealCount: number,
+  checked?: boolean
 }
 
 export type UnserInfo = {

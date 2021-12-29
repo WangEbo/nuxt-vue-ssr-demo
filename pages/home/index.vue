@@ -44,24 +44,25 @@ export default defineComponent({
     setTimeout(() => {
       bannerList.value = [
         {
-          url: "/imgs/bed/bed1.jpg",
+          url: "/imgs/bed/sofa.png",
         },
         {
-          url: "/imgs/bed/bed2.jpg",
+          url: "/imgs/bed/table.png",
         },
         {
-          url: "/imgs/bed/bed3.jpg",
+          url: "/imgs/bed/table2.png",
         },
       ];
       newGoogsList.value = [
         {
           url: "/imgs/sofa/sofa1.jpg",
-          alt: "美家沙发",
+          name: "美家沙发",
           description: "美家沙发",
           prcie: 3600,
           sealCount: 259,
         },
         {
+          name: '美家沙发',
           url: "/imgs/sofa/sofa2.jpg",
           description: "美家沙发",
           prcie: 5700,
@@ -69,7 +70,7 @@ export default defineComponent({
         },
         {
           url: "/imgs/sofa/sofa3.jpg",
-          alt: "美家沙发",
+          name: "美家沙发",
           description: "美家沙发",
           prcie: 5700,
           sealCount: 11888,
@@ -114,37 +115,51 @@ export default defineComponent({
 .home{
   width: 100%;
   height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
   overflow: scroll;
   display: flex;
   flex-direction: column;
   header{
     margin-top: 20px;
+    .search-bar{
+      width: 100%;
+      margin: 0 auto;
+      .van-field__control{
+        background-color: rgba(245, 245, 247, 1);
+        border-radius: 6px;
+        
+      }
+    }
   }
 }
 
 .main-content {
   flex: 1;
   margin: 20px 0 60px;
-  .banner-img {
-    height: 300px;
-    background-size: 100% 100%;
-    background-position: 0 0;
-    background-repeat: no-repeat;
+  .banner{
+    box-shadow: 0px 8px 13px rgba(0, 0, 0, 0.17);
+    border-radius: 8px;
+    overflow: hidden;
+    .banner-img {
+      height: 175px;
+      background-size: 100% 100%;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
   }
 
   .new-goods-preview {
-    margin-top: 20px;
+    margin-top: 30px;
     ul {
       display: flex;
       box-sizing: border-box;
       flex-wrap: wrap;
       justify-content: space-between;
       align-content: flex-start;
-      margin: 0 4%;
       li {
         width: 47.9%;
         border-radius: 4px;
-        box-shadow: 2px 6px 2px #f3f3f3;
         margin-bottom: 10px;
       }
     }

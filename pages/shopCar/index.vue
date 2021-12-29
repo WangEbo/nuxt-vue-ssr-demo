@@ -4,7 +4,7 @@
     <div class="shop-list-wrap">
       <ul>
         <li v-for="(item, i) in shopList" :key="i">
-          <div class="good-card">{{item.name}}</div>
+          <shop-item :detail="item"></shop-item>
         </li>
       </ul>
     </div>
@@ -35,6 +35,8 @@ export default defineComponent({
 })
 </script>
 
-<style>
-
+<style lang="scss">
+  .shop-car{
+    padding: 20px;
+  }
 </style>

@@ -1,10 +1,9 @@
 <template>
   <van-cell-group inset class="search-bar">
+    <mh-icon icon="icon-search"></mh-icon>
     <van-field v-model="keyword" label="" placeholder="请输入搜索关键词" @keydown.enter="search()" />
-    
   </van-cell-group>
   <van-row v-show="historyList.length" class="search-history">
-    <!-- <van-col span="8">span: 8</van-col> -->
     <span v-for="(item,i) in historyList" :key="i">{{item}}</span>
   </van-row>
 </template>
@@ -36,14 +35,21 @@ export default defineComponent({
 
 <style lang="scss">
 .search-bar{
-  width: 92%;
-  margin: 0 auto;
+  position: relative;
+  color: rgba(153, 153, 153, 1);
   .van-field__control{
     width: 100%;
     box-sizing: border-box;
-    padding: 3px 5px;
-    border: 1px solid #858282;
+    padding: 10px 13px;
     border-radius: 8px;
+    text-indent: 20px;
+  }
+  .icon-search{
+    position: absolute;
+    left: 10px;
+    top:13px;
+    font-size: 18px;
+    z-index: 20;
   }
 }
 </style>
