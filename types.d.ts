@@ -3,6 +3,7 @@ export type BannerItem = {
 }
 
 export type GoodItem = {
+  id: string,
   name: string,
   url: string;
   alt?: string;

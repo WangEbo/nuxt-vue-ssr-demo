@@ -1,37 +1,96 @@
 <template>
   <!-- 主页 -->
-  <div class="home">
-    <header>
-      <common-search-bar></common-search-bar>
-    </header>
-    <div class="main-content">
-      <div class="banner">
-        <swiper :modules="modules" :hashNavigation="true" :scrollbar="{ draggable: true }" @swiper="onSwiper" @slideChange="onSlideChange">
-          <swiper-slide v-for="(item, i) in bannerList" :key="i">
-            <div class="banner-img">
-              <img style="height: 100%; width: 100%;" :src="item.url" alt="">
-            </div>
-          </swiper-slide>
-        </swiper>
-      </div>
-      <div class="new-goods-preview">
-        <ul>
-          <li v-for="(item, i) in newGoogsList" :key="i">
-            <common-good-card :detail="item"></common-good-card>
-          </li>
-        </ul>
+  <scroller class="home" :pulldown="true" :pullup="true" @pulldown="refresh" @scrollToEnd="loadMore">
+    <div>
+      <header>
+        <common-search-bar></common-search-bar>
+      </header>
+      <div class="main-content">
+        <div class="banner">
+          <swiper :autoplay="{delay: 2000}" :pagination="true" :loop="true" :modules="modules" :hashNavigation="true" :scrollbar="{ draggable: true }" @swiper="onSwiper" @slideChange="onSlideChange">
+            <swiper-slide v-for="(item, i) in bannerList" :key="i">
+              <div class="banner-img">
+                <img style="height: 100%; width: 100%;" :src="item.url" alt="">
+              </div>
+            </swiper-slide>
+          </swiper>
+        </div>
+        <div class="new-goods-preview">
+          <water-fall :colNum="2" :list="newGoogsList" :gap="18">
+            <template v-slot:fall-item="slotProps">
+              <common-good-card :detail="slotProps.item"></common-good-card>
+            </template>
+          </water-fall>
+        </div>
       </div>
     </div>
-  </div>
-
+  </scroller>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
+import { GoodItem, BannerItem } from "~~/types";
+
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import "swiper/css";
-import { GoodItem, BannerItem } from "~~/types";
+
+import { Toast } from 'vant';
+
+
+let goodList1 = [
+  {
+    id: "1351afqefqe13r1",
+    url: "/imgs/bed/bed1.png",
+    name: "红木床",
+    description: "红木床",
+    prcie: 3000,
+    sealCount: 259,
+  },
+  {
+    id: "1351afqefqe13r1",
+    url: "/imgs/sofa/sofa1.png",
+    name: "英式沙发",
+    description: "英式沙发",
+    prcie: 5888,
+    sealCount: 259,
+  },
+  {
+    id: "1351afgqegq1",
+    name: "现代简约床",
+    url: "/imgs/bed/bed2.png",
+    description: "美家沙发",
+    prcie: 2600,
+    sealCount: 1299,
+  },
+  {
+    id: "1351afgqegq1",
+    name: "中式沙发",
+    url: "/imgs/sofa/sofa2.png",
+    description: "中式沙发",
+    prcie: 2988,
+    sealCount: 1299,
+  },
+  {
+    id: "wrh2326463hhefd1",
+    url: "/imgs/bed/bed3.png",
+    name: "儿童床",
+    description: "儿童床",
+    prcie: 1988,
+    sealCount: 11888,
+  },
+  {
+    id: "wrh2326463hhefd1",
+    url: "/imgs/sofa/sofa3.png",
+    name: "现代简约沙发",
+    description: "现代简约沙发",
+    prcie: 1988,
+    sealCount: 11888,
+  },
+];
+
+let bannerList = ref([] as BannerItem[]),
+    newGoogsList = ref([] as GoodItem[]);
 
 export default defineComponent({
   components: {
@@ -39,8 +98,7 @@ export default defineComponent({
     SwiperSlide,
   },
   setup() {
-    let bannerList = ref([] as BannerItem[]),
-      newGoogsList = ref([] as GoodItem[]);
+   
     setTimeout(() => {
       bannerList.value = [
         {
@@ -53,32 +111,10 @@ export default defineComponent({
           url: "/imgs/bed/table2.png",
         },
       ];
-      newGoogsList.value = [
-        {
-          url: "/imgs/sofa/sofa1.jpg",
-          name: "美家沙发",
-          description: "美家沙发",
-          prcie: 3600,
-          sealCount: 259,
-        },
-        {
-          name: '美家沙发',
-          url: "/imgs/sofa/sofa2.jpg",
-          description: "美家沙发",
-          prcie: 5700,
-          sealCount: 1299,
-        },
-        {
-          url: "/imgs/sofa/sofa3.jpg",
-          name: "美家沙发",
-          description: "美家沙发",
-          prcie: 5700,
-          sealCount: 11888,
-        },
-      ];
+      newGoogsList.value = goodList1
     }, 500);
     const onSwiper = (swiper) => {
-      console.log(swiper);
+      console.log('swiper');
     };
     const onSlideChange = () => {
       console.log("slide change");
@@ -98,7 +134,9 @@ export default defineComponent({
       logoUrl: "/imgs/logo.png",
     };
   },
-  mounted() {},
+  mounted() {
+
+  },
   methods: {
     acceptPosition(position) {},
     showMap() {
@@ -107,37 +145,88 @@ export default defineComponent({
       let mp = this.$refs.Map.initMap();
       console.log(mp);
     },
+    refresh(){
+      setTimeout(()=> {
+        newGoogsList.value = goodList1;
+        Toast({
+          message: '刷新成功',
+          position: 'top'
+        })
+      })
+    },
+    loadMore(){
+      console.log(newGoogsList.value.length > 7);
+      
+      if(this.newGoogsList.length > 7){
+        return
+      }
+      setTimeout(()=> {
+        newGoogsList.value  = [
+          ...this.newGoogsList,
+          ...[
+            {
+              id: "1351afgqegq1",
+              name: "现代简约床",
+              url: "/imgs/bed/bed2.png",
+              description: "美家沙发",
+              prcie: 2600,
+              sealCount: 1299,
+            },
+            {
+              id: "1351afgqegq1",
+              name: "中式沙发",
+              url: "/imgs/sofa/sofa2.png",
+              description: "中式沙发",
+              prcie: 2988,
+              sealCount: 1299,
+            },
+            {
+              id: "wrh2326463hhefd1",
+              url: "/imgs/bed/bed3.png",
+              name: "儿童床",
+              description: "儿童床",
+              prcie: 1988,
+              sealCount: 11888,
+            },
+            {
+              id: "wrh2326463hhefd1",
+              url: "/imgs/sofa/sofa3.png",
+              name: "现代简约沙发",
+              description: "现代简约沙发",
+              prcie: 1988,
+              sealCount: 11888,
+            },
+          ]
+        ]
+      }, 2000)
+    }
   },
 });
 </script>
 
 <style lang="scss">
-.home{
+.home {
   width: 100%;
-  height: 100%;
-  padding: 20px;
+  height: calc(100% - 60px);
   box-sizing: border-box;
-  overflow: scroll;
-  display: flex;
-  flex-direction: column;
-  header{
+  padding: 20px;
+  // overflow: scroll;
+  header {
     margin-top: 20px;
-    .search-bar{
+    .search-bar {
       width: 100%;
       margin: 0 auto;
-      .van-field__control{
+      .van-field__control {
         background-color: rgba(245, 245, 247, 1);
         border-radius: 6px;
-        
       }
     }
   }
 }
 
 .main-content {
-  flex: 1;
   margin: 20px 0 60px;
-  .banner{
+  .banner {
     box-shadow: 0px 8px 13px rgba(0, 0, 0, 0.17);
     border-radius: 8px;
     overflow: hidden;
@@ -152,15 +241,13 @@ export default defineComponent({
   .new-goods-preview {
     margin-top: 30px;
     ul {
-      display: flex;
       box-sizing: border-box;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-content: flex-start;
       li {
-        width: 47.9%;
         border-radius: 4px;
-        margin-bottom: 10px;
+        margin-bottom: 18px;
+        .col-item {
+          margin-bottom: 18px;
+        }
       }
     }
   }
