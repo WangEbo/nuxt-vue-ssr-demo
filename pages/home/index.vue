@@ -210,7 +210,7 @@ export default defineComponent({
   height: calc(100% - 60px);
   box-sizing: border-box;
   padding: 20px;
-  // overflow: scroll;
+  overflow: scroll;
   header {
     margin-top: 20px;
     .search-bar {

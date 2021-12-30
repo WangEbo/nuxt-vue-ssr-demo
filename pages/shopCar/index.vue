@@ -20,8 +20,9 @@ export default defineComponent({
     setTimeout(() => {
       shopList.value = [
         {
+          id: '1313521sdvsads',
           name: '美家沙发',
-          url: "/imgs/sofa/sofa2.jpg",
+          url: "/imgs/sofa/sofa2.png",
           description: "美家沙发",
           prcie: 5700,
           sealCount: 1299,
