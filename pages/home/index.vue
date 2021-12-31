@@ -6,7 +6,7 @@
     @pulldown="refresh" 
     @pullUp="loadMore"
     :beforePullUpTip="beforePullUpTip">
-    <div>
+    <div class="scroll-inner-content">
       <header>
         <common-search-bar></common-search-bar>
       </header>
@@ -137,13 +137,29 @@ export default defineComponent({
       location: {},
       mapVisible: false,
       logoUrl: "/imgs/logo.png",
-      beforePullUpTip: '下拉加载更多'
+      beforePullUpTip: ''
     };
   },
   mounted() {
-
+    this.$nextTick(()=>{
+      this.refreshScroller();
+    })
+  },
+  watch:{
+    newGoogsList: {
+      handler(nval){
+        this.$nextTick(()=>{
+          this.refreshScroller();
+        })
+      }
+    }
   },
   methods: {
+    refreshScroller(){
+      let refScroller = this.$refs.scroller;
+      let bscroll = refScroller?.bscroll;
+      bscroll && bscroll.refresh();
+    },
     acceptPosition(position) {},
     showMap() {
       console.log("showMap");
@@ -152,14 +168,18 @@ export default defineComponent({
       console.log(mp);
     },
     refresh(){
+      let refScroller = this.$refs.scroller;
+      let bscroll = refScroller.bscroll;
       setTimeout(()=> {
         newGoogsList.value = goodList1;
         Toast({
           message: '刷新成功',
           position: 'top'
         })
-        this.beforePullUpTip = '下拉加载更多'
-      })
+        bscroll.finishPullDown()
+        this.beforePullUpTip = '上拉加载更多'
+        refScroller.isRefreshing = false;
+      },3000)
     },
     loadMore(){
       console.log(newGoogsList.value.length > 7);
@@ -237,7 +257,7 @@ export default defineComponent({
   height: calc(100% - 60px);
   box-sizing: border-box;
   overflow: hidden;
-  .scroll-content{
+  .scroll-outer-wrap{
     padding: 20px;
   }
   header {
@@ -273,7 +293,6 @@ export default defineComponent({
       box-sizing: border-box;
       li {
         border-radius: 4px;
-        margin-bottom: 18px;
         .col-item {
           margin-bottom: 18px;
         }

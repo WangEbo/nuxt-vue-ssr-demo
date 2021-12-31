@@ -2,9 +2,9 @@
   <!-- bscroll封装, bscroller 为外部定高容器， scoller-content为自有高度内容装载区域， -->
   <!-- 使用须知： 父容器需定高， -->
   <div class="bscroller" ref="wrapper"> 
-    <div class="scroll-content">
+    <div class="scroll-outer-wrap">
       <div class="pulldown-tip">
-        <div v-show="beforePullDown">
+        <!-- <div v-show="beforePullDown">
           <span>下拉刷新</span>
         </div>
         <div v-show="!beforePullDown">
@@ -14,7 +14,8 @@
           <div v-show="!isPullingDown">
             <span>刷新成功</span>
           </div>
-        </div>
+        </div> -->
+        <div v-html="tipText"></div>
       </div>
       <slot></slot>
       <div class="pullup-tip">
@@ -28,10 +29,30 @@
     </div>
   </div>
 </template>
-<script type="text/ecmascript-6">
-import BScroll from 'better-scroll'
+<script lang="ts">
+import { PropType, defineComponent } from 'vue'
+import BScroll from '@better-scroll/core'
+import PullDown, { PullDownRefreshConfig } from '@better-scroll/pull-down'
+import Pullup from '@better-scroll/pull-up'
 
-export default {
+BScroll.use(Pullup)
+BScroll.use(PullDown)
+
+const PHASE = {
+  moving: {
+    enter: 'enter',
+    leave: 'leave'
+  },
+  fetching: 'fetching',
+  succeed: 'succeed'
+}
+const TIME_BOUNCE = 800;
+let STEP = 0
+const ARROW_BOTTOM = '<svg width="16" height="16" viewBox="0 0 512 512"><path fill="currentColor" d="M367.997 338.75l-95.998 95.997V17.503h-32v417.242l-95.996-95.995l-22.627 22.627L256 496l134.624-134.623l-22.627-22.627z"></path></svg>'
+const ARROW_UP = '<svg width="16" height="16" viewBox="0 0 512 512"><path fill="currentColor" d="M390.624 150.625L256 16L121.376 150.625l22.628 22.627l95.997-95.998v417.982h32V77.257l95.995 95.995l22.628-22.627z"></path></svg>'
+
+console.log(BScroll);
+export default defineComponent({
   props: {
     /**
      * 1 滚动的时候会派发scroll事件，会截流。
@@ -96,8 +117,13 @@ export default {
       default: 20
     },
     pullDownRefresh: {
-      threshold: 70,
-      stop: 56
+      type: Object as PropType<PullDownRefreshConfig>,
+      default(){
+        return {
+          threshold: 70,
+          stop: 56
+        }
+      }
     },
     pullDownText: {
       type: String,
@@ -115,7 +141,8 @@ export default {
       isPullUpLoad: false,
       beforePullDown: true,
       isPullingDown: false,
-
+      tipText: '',
+      isRefreshing: false
     }
   },
   methods: {
@@ -127,7 +154,10 @@ export default {
       this.bscroll = new BScroll(this.$refs.wrapper, {
         // probeType: this.probeType,
         pullUpLoad: true,
-        pullDownRefresh: this.pullDownRefresh
+        bounceTime: TIME_BOUNCE,
+        useTransition: false,
+        pullDownRefresh: this.pullDownRefresh,
+        moveable: true
       })
 
       // 是否派发滚动事件
@@ -140,31 +170,28 @@ export default {
 
 
       // 是否派发滚动到底部事件，用于上拉加载
-      this.bscroll.on('scrollEnd', () => {
-        // 滚动到底部
-        if (this.bscroll.y <= (this.bscroll.maxScrollY + 50)) {
-          if (this.pullup) {
-            !this.isPullUpLoad && this.$emit('pullUp') //防抖
-            this.isPullUpLoad = true;
-            console.log('加载中');
-          }
-        }
+      // this.bscroll.on('scrollEnd', () => {
+      //   // 滚动到底部
+      //   console.log('maxScrollY:',this.bscroll.maxScrollY);
+      //   if (this.bscroll.y <= (this.bscroll.maxScrollY + 50)) {
+      //     if (this.pullup) {
+      //       !this.isPullUpLoad && this.$emit('pullUp') //防抖
+      //       this.isPullUpLoad = true;
+      //       console.log('加载中');
+      //     }
+      //   }
+      // })
+      this.bscroll.on('pullingUp', this.pullingUpHandler)
+
+      this.bscroll.on('enterThreshold', () => {
+        this.setTipText(PHASE.moving.enter)
+      })
+      this.bscroll.on('leaveThreshold', () => {
+        this.setTipText(PHASE.moving.leave)
       })
 
-
-      this.bscroll.on('scrollEnd', e => {
-        console.log('scrollEnd')
-      })
       // 是否派发顶部下拉事件，用于下拉刷新
-      if (this.pulldown) {
-        // this.bscroll.on('pullingDown', this.pullingDownHandler)
-        this.bscroll.on('touchEnd', (pos) => {
-          // 下拉动作
-          if (pos.y > 50) {
-            this.$emit('pulldown')
-          }
-        })
-      }
+      this.bscroll.on('pullingDown', this.pullingDownHandler)
 
       // 是否派发列表滚动开始的事件
       if (this.beforeScroll) {
@@ -173,18 +200,43 @@ export default {
         })
       }
     },
-    async pullingDownHandler() {
-      console.log('trigger pullDown')
-      this.beforePullDown = false
-      this.isPullingDown = true
-      STEP += 1
+
+
+    async pullingUpHandler() {
+      console.log(this.isPullUpLoad);
+      
+      !this.isPullUpLoad && this.$emit('pullUp') //防抖
+      this.isPullUpLoad = true
+
+
     },
-    async finishPullDown() {
-      this.bscroll.finishPullDown()
-      setTimeout(() => {
-        this.beforePullDown = true
-        this.bscroll.refresh()
-      }, TIME_BOUNCE + 100)
+
+    async pullingDownHandler() {
+      this.setTipText(PHASE.fetching)
+      STEP += 1
+
+      !this.isRefreshing && this.$emit('pulldown') //防抖
+      this.isRefreshing = true
+    },
+    async getData() {
+      const newData = await this.mockFetchData()
+      this.dataList = newData.concat(this.dataList)
+    },
+    setTipText(phase = PHASE.default) {
+      const TEXTS_MAP = {
+        'enter': `${ARROW_BOTTOM}${'下拉'}`,
+        'leave': `${ARROW_UP}释放刷新`,
+        'fetching': '努力刷新中...',
+        'succeed': '刷新成功'
+      }
+      this.tipText = TEXTS_MAP[phase]
+      console.log(this.tipText);
+    },    
+
+
+    clearDynamicStatus(){
+      this.isRefreshing = false;
+      this.isPullUpLoad = false;
     },
     disable() {
       // 代理better-scroll的disable方法
@@ -212,17 +264,17 @@ export default {
   },
   watch: {
     // 监听数据的变化，延时refreshDelay时间后调用refresh方法重新计算，保证滚动效果正常
-    data() {
-      setTimeout(() => {
-        this.refresh()
-      }, this.refreshDelay)
-    }
+    // data() {
+    //   setTimeout(() => {
+    //     this.refresh()
+    //   }, this.refreshDelay)
+    // }
   }
-}
+})
 </script>
 
 <style lang="scss">
-.scroll-content{
+.scroll-outer-wrap{
   position: relative;
 }
 .pulldown-tip{
@@ -239,5 +291,6 @@ export default {
 .pullup-tip{
   text-align: center;
   color: #999;
+  padding: 20px;
 }
 </style>
