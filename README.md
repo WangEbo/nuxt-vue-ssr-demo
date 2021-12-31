@@ -7,3 +7,13 @@
 - swiper
 - better-scroll
 - vant
+
+### 启动
+npm i 
+npm run dev
+
+### 启动构建并开启服务器
+npm i pm2 -g
+npm run build
+npm run prod
+- 其中，pm2 配置文件在escosystent.config.js ，可支持配置多环境构建，支持自定义环境变量
