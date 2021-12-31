@@ -1,6 +1,11 @@
 <template>
   <!-- 主页 -->
-  <scroller class="home" :pulldown="true" :pullup="true" @pulldown="refresh" @scrollToEnd="loadMore">
+  <scroller ref="scroller" class="home" 
+    :pulldown="true" 
+    :pullup="true" 
+    @pulldown="refresh" 
+    @pullUp="loadMore"
+    :beforePullUpTip="beforePullUpTip">
     <div>
       <header>
         <common-search-bar></common-search-bar>
@@ -132,6 +137,7 @@ export default defineComponent({
       location: {},
       mapVisible: false,
       logoUrl: "/imgs/logo.png",
+      beforePullUpTip: '下拉加载更多'
     };
   },
   mounted() {
@@ -152,14 +158,28 @@ export default defineComponent({
           message: '刷新成功',
           position: 'top'
         })
+        this.beforePullUpTip = '下拉加载更多'
       })
     },
     loadMore(){
       console.log(newGoogsList.value.length > 7);
-      
-      if(this.newGoogsList.length > 7){
+      let refScroller = this.$refs.scroller;
+      let bscroll = refScroller.bscroll;
+      if(this.newGoogsList.length > 7 ){
+        setTimeout(()=> {
+          bscroll.finishPullUp();
+          bscroll.refresh();
+          refScroller.isPullUpLoad = false;
+          Toast({
+            message: '没有更多了！',
+            position: 'top'
+          })
+          this.beforePullUpTip = '没有更多了！'
+          console.log(this.beforePullUpTip, refScroller);
+        },500)
         return
       }
+      console.log('触发了加载');
       setTimeout(()=> {
         newGoogsList.value  = [
           ...this.newGoogsList,
@@ -198,8 +218,15 @@ export default defineComponent({
             },
           ]
         ]
-      }, 2000)
-    }
+        console.log('数据加载完成');
+        this.$nextTick(()=> {
+          bscroll.finishPullUp()
+          bscroll.refresh()
+          refScroller.isPullUpLoad = false
+          console.log('滚动组件刷新');
+        })
+      },2000)
+    },
   },
 });
 </script>
@@ -209,8 +236,10 @@ export default defineComponent({
   width: 100%;
   height: calc(100% - 60px);
   box-sizing: border-box;
-  padding: 20px;
-  overflow: scroll;
+  overflow: hidden;
+  .scroll-content{
+    padding: 20px;
+  }
   header {
     margin-top: 20px;
     .search-bar {
@@ -225,7 +254,7 @@ export default defineComponent({
 }
 
 .main-content {
-  margin: 20px 0 60px;
+  margin-top: 20px;
   .banner {
     box-shadow: 0px 8px 13px rgba(0, 0, 0, 0.17);
     border-radius: 8px;
