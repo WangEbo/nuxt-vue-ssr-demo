@@ -21,9 +21,9 @@
           </swiper>
         </div>
         <div class="new-goods-preview">
-          <water-fall :colNum="2" :list="newGoogsList" :gap="18">
+          <water-fall :colNum="2" :list="newGoogsList" :gap="18" ref="waterFall">
             <template v-slot:fall-item="slotProps">
-              <common-good-card :detail="slotProps.item" @good-click="goodClick"></common-good-card>
+              <common-good-card :data-good="slotProps.item" :detail="slotProps.item" @good-click="goodClick"></common-good-card>
             </template>
           </water-fall>
         </div>
@@ -92,6 +92,56 @@ let goodList1 = [
     sealCount: 11888,
   },
 ];
+let goodList2 = [
+  {
+    id: "1351afqeerhee13r1",
+    url: "/imgs/bed/bed1.png",
+    name: "红木床",
+    description: "红木床",
+    prcie: 3000,
+    sealCount: 259,
+  },
+  {
+    id: "1351afqefqe13r1",
+    url: "/imgs/sofa/sofa4.png",
+    name: "英式沙发",
+    description: "英式沙发",
+    prcie: 5888,
+    sealCount: 259,
+  },
+  {
+    id: "1351afgqegq1",
+    name: "现代简约床",
+    url: "/imgs/bed/bed2.png",
+    description: "美家沙发",
+    prcie: 2600,
+    sealCount: 1299,
+  },
+  {
+    id: "1351afgqegq1",
+    name: "中式沙发",
+    url: "/imgs/sofa/sofa5.png",
+    description: "中式沙发",
+    prcie: 2988,
+    sealCount: 1299,
+  },
+  {
+    id: "wrh232646qqegqefd1",
+    url: "/imgs/sofa/sofa6.png",
+    name: "sofa1",
+    description: "儿童床",
+    prcie: 1988,
+    sealCount: 11888,
+  },
+  {
+    id: "wrh2326463hhefd1",
+    url: "/imgs/sofa/sofa7.png",
+    name: "现代简约沙发",
+    description: "现代简约沙发",
+    prcie: 1988,
+    sealCount: 11888,
+  },
+];
 
 let bannerList = ref([] as BannerItem[]),
     newGoogsList = ref([] as GoodItem[]);
@@ -139,15 +189,13 @@ export default defineComponent({
     };
   },
   mounted() {
-    this.$nextTick(()=>{
-      this.refreshScroller();
-    })
+    
   },
   watch:{
-    newGoogsList: {
+    newGoogsList: {  //监听推荐商品数据变更并及时刷新scroller
       handler(nval){
         this.$nextTick(()=>{
-          this.refreshScroller();
+          this.checkWFImgsLoaded();
         })
       }
     }
@@ -179,73 +227,49 @@ export default defineComponent({
       console.log(newGoogsList.value.length > 7);
       let refScroller = this.$refs.scroller;
       let bscroll = refScroller.bscroll;
-      if(this.newGoogsList.length > 7 ){
+      if(this.newGoogsList.length > 40 ){
         setTimeout(()=> {
           bscroll.finishPullUp();
           bscroll.refresh();
           refScroller.isPullUpLoad = false;
           this.beforePullUpTip = '没有更多了！'
-          console.log(this.beforePullUpTip, refScroller);
         },2000)
         return
       }
-      console.log('触发了加载');
       setTimeout(()=> {
         newGoogsList.value  = [
           ...this.newGoogsList,
-          ...[
-            {
-              id: "1351afgqegq1",
-              name: "现代简约床",
-              url: "/imgs/bed/bed2.png",
-              description: "美家沙发",
-              prcie: 2600,
-              sealCount: 1299,
-            },
-            {
-              id: "1351afgqegq1",
-              name: "中式沙发",
-              url: "/imgs/sofa/sofa2.png",
-              description: "中式沙发",
-              prcie: 2988,
-              sealCount: 1299,
-            },
-            {
-              id: "wrh2326463hhefd1",
-              url: "/imgs/bed/bed3.png",
-              name: "儿童床",
-              description: "儿童床",
-              prcie: 1988,
-              sealCount: 11888,
-            },
-            {
-              id: "wrh2326463hhefd1",
-              url: "/imgs/sofa/sofa3.png",
-              name: "现代简约沙发",
-              description: "现代简约沙发",
-              prcie: 1988,
-              sealCount: 11888,
-            },
-          ]
+          ...(this.newGoogsList.length/6%2 == 1 ? goodList2 : goodList1)
         ]
-        console.log('数据加载完成');
+        console.log(newGoogsList.value);
+        
         this.$nextTick(()=> {
           bscroll.finishPullUp()
           bscroll.refresh()
-          refScroller.isPullUpLoad = false
-          console.log('滚动组件刷新');
+          refScroller.isPullUpLoad = false;
         })
       },2000)
     },
     goodClick(good){
-      console.log(good);
-      
       this.$router.push({
         name: 'goodDetail',
         params: {
           id: good.id
         }
       })
+    },
+    checkWFImgsLoaded(){ // 监测瀑布流图片加成完成时刷新 scroller 数值
+      let imgs = document.querySelectorAll('.gd-img-only');
+      if(!imgs) return
+
+      let timer = setInterval(()=> {
+        let loaded = Array.prototype.every.call(imgs, (img)=> img.complete);
+        if(loaded){//已加载完成时刷新 ，关闭定时器
+          clearInterval(timer)
+          console.log('刷新瀑布流容器');
+          this.refreshScroller();
+        }
+      },100)
     }
   },
 });
@@ -259,6 +283,12 @@ export default defineComponent({
   overflow: hidden;
   .scroll-outer-wrap{
     padding: 20px;
+  }
+  .bscroll-vertical-scrollbar{
+    width: 6px!important;
+    .bscroll-indicator{
+      background: rgba(160, 160, 160, 1)!important;
+    }
   }
   header {
     margin-top: 20px;

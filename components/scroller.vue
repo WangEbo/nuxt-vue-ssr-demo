@@ -23,9 +23,11 @@ import { PropType, defineComponent } from 'vue'
 import BScroll from '@better-scroll/core'
 import PullDown, { PullDownRefreshConfig } from '@better-scroll/pull-down'
 import Pullup from '@better-scroll/pull-up'
+import ScrollBar from '@better-scroll/scroll-bar'
 
-BScroll.use(Pullup)
-BScroll.use(PullDown)
+BScroll.use(ScrollBar) //使用 滚动条
+BScroll.use(Pullup)  //使用下拉加载
+BScroll.use(PullDown) //使用上拉刷新
 
 const PHASE = {
   moving: {
@@ -53,7 +55,7 @@ export default defineComponent({
     },
     beforePullUpTip: {
       type: String,
-      default: '上拉加载更多'
+      default: ()=> '上拉加载更多'
     },
     /**
      * 是否开启横向滚动
@@ -130,7 +132,8 @@ export default defineComponent({
       beforePullDown: true,
       isPullingDown: false,
       tipText: '',
-      isRefreshing: false
+      isRefreshing: false,
+     
     }
   },
   methods: {
@@ -145,7 +148,12 @@ export default defineComponent({
         bounceTime: TIME_BOUNCE,
         useTransition: false,
         pullDownRefresh: this.pullDownRefresh,
-        moveable: true
+        moveable: true,
+        click: true, // 允许内部元素点击事件 
+        mouseWheel: true,
+        // tap: true,
+        scrollY: true,
+        scrollbar: true,
       })
 
       // 是否派发滚动事件
@@ -160,12 +168,11 @@ export default defineComponent({
       // 是否派发滚动到底部事件，用于上拉加载
       // this.bscroll.on('scrollEnd', () => {
       //   // 滚动到底部
+      //   debugger
       //   console.log('maxScrollY:',this.bscroll.maxScrollY);
       //   if (this.bscroll.y <= (this.bscroll.maxScrollY + 50)) {
-      //     if (this.pullup) {
-      //       !this.isPullUpLoad && this.$emit('pullUp') //防抖
-      //       this.isPullUpLoad = true;
-      //       console.log('加载中');
+      //     if (this.pullup) {this
+      //       this.pullingUpHandler()
       //     }
       //   }
       // })
@@ -191,6 +198,7 @@ export default defineComponent({
 
 
     async pullingUpHandler() {
+      console.log('触发上拉加载');
       
       !this.isPullUpLoad && this.$emit('pullUp') //防抖
       this.isPullUpLoad = true

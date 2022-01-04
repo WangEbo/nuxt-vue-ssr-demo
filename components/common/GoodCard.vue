@@ -1,16 +1,13 @@
 <template>
-  <div class="good-detail"  @click="clickGood">
+  <div class="good-detail" @tap="clickGood" @click="clickGood">
     <div class="row1">
-      <img :src="detail.url" :alt="detail.alt">
+      <img class="gd-img-only" :src="detail.url" :alt="detail.alt">
     </div>
     <div class="row2">
       <p class="g-name">{{detail.name}}</p>
       <p class="price">￥{{detail.prcie}}</p>
     </div>
-    <div class="row3">
-      <!-- <p class="description">{{detail.description}}</p> -->
-      <!-- <p class="seal-count">{{detail.sealCount}}</p> -->
-    </div>
+    <div class="row3"></div>
   </div>
 </template>
 
@@ -26,6 +23,7 @@ export default defineComponent({
   },
   methods: {
     clickGood(){
+      console.log('11111');
       this.$emit('goodClick', this.detail)
     },
   }
@@ -35,8 +33,10 @@ export default defineComponent({
 <style lang="scss">
 .good-detail{
   cursor: pointer;
+  pointer-events: all;
   img{
     width: 100%;
+    min-height: 60px;
     border-radius: 6px;
     box-shadow: 1px 2px 2px #f9f9f9;
   }
@@ -47,7 +47,7 @@ export default defineComponent({
     justify-content: space-between;
     align-items: baseline;
     line-height: 26px;
-    .good-name{
+    .g-name{
       color: rgba(17, 17, 17, 1);
       font-size: 14px;
     }

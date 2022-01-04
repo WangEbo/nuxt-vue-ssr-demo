@@ -41,6 +41,12 @@ export default defineComponent({
       }
     }
   },
+  updated(){
+    
+  },
+  mounted(){
+
+  },
   methods: {
     renderList(){
       let newColList = [];
@@ -60,11 +66,9 @@ export default defineComponent({
 
       colList.value = newColList
       console.log(colList);
-    }
+    },
   },
-  mounted(){
-
-  }
+  
 })
 </script>
 
@@ -72,5 +76,6 @@ export default defineComponent({
   .water-wrap{
     display: flex;
     flex-direction: row;
+    font-size: 14px;
   }
 </style>
