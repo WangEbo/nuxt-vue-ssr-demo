@@ -28,7 +28,7 @@ export default defineComponent({
   methods: {
     search(){
       console.log('搜索' + this.keyword)
-    }
+    },
   }
 })
 </script>
