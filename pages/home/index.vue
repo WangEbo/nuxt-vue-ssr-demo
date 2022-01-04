@@ -23,7 +23,7 @@
         <div class="new-goods-preview">
           <water-fall :colNum="2" :list="newGoogsList" :gap="18">
             <template v-slot:fall-item="slotProps">
-              <common-good-card :detail="slotProps.item"></common-good-card>
+              <common-good-card :detail="slotProps.item" @good-click="goodClick"></common-good-card>
             </template>
           </water-fall>
         </div>
@@ -41,7 +41,6 @@ import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import "swiper/css";
 
 import { Toast } from 'vant';
-
 
 let goodList1 = [
   {
@@ -103,7 +102,6 @@ export default defineComponent({
     SwiperSlide,
   },
   setup() {
-   
     setTimeout(() => {
       bannerList.value = [
         {
@@ -172,14 +170,10 @@ export default defineComponent({
       let bscroll = refScroller.bscroll;
       setTimeout(()=> {
         newGoogsList.value = goodList1;
-        Toast({
-          message: '刷新成功',
-          position: 'top'
-        })
         bscroll.finishPullDown()
         this.beforePullUpTip = '上拉加载更多'
         refScroller.isRefreshing = false;
-      },3000)
+      },1000)
     },
     loadMore(){
       console.log(newGoogsList.value.length > 7);
@@ -190,13 +184,9 @@ export default defineComponent({
           bscroll.finishPullUp();
           bscroll.refresh();
           refScroller.isPullUpLoad = false;
-          Toast({
-            message: '没有更多了！',
-            position: 'top'
-          })
           this.beforePullUpTip = '没有更多了！'
           console.log(this.beforePullUpTip, refScroller);
-        },500)
+        },2000)
         return
       }
       console.log('触发了加载');
@@ -247,6 +237,16 @@ export default defineComponent({
         })
       },2000)
     },
+    goodClick(good){
+      console.log(good);
+      
+      this.$router.push({
+        name: 'goodDetail',
+        params: {
+          id: good.id
+        }
+      })
+    }
   },
 });
 </script>

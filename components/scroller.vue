@@ -4,17 +4,6 @@
   <div class="bscroller" ref="wrapper"> 
     <div class="scroll-outer-wrap">
       <div class="pulldown-tip">
-        <!-- <div v-show="beforePullDown">
-          <span>下拉刷新</span>
-        </div>
-        <div v-show="!beforePullDown">
-          <div v-show="isPullingDown">
-            <span>努力加载中...</span>
-          </div>
-          <div v-show="!isPullingDown">
-            <span>刷新成功</span>
-          </div>
-        </div> -->
         <div v-html="tipText"></div>
       </div>
       <slot></slot>
@@ -51,7 +40,6 @@ let STEP = 0
 const ARROW_BOTTOM = '<svg width="16" height="16" viewBox="0 0 512 512"><path fill="currentColor" d="M367.997 338.75l-95.998 95.997V17.503h-32v417.242l-95.996-95.995l-22.627 22.627L256 496l134.624-134.623l-22.627-22.627z"></path></svg>'
 const ARROW_UP = '<svg width="16" height="16" viewBox="0 0 512 512"><path fill="currentColor" d="M390.624 150.625L256 16L121.376 150.625l22.628 22.627l95.997-95.998v417.982h32V77.257l95.995 95.995l22.628-22.627z"></path></svg>'
 
-console.log(BScroll);
 export default defineComponent({
   props: {
     /**
@@ -203,7 +191,6 @@ export default defineComponent({
 
 
     async pullingUpHandler() {
-      console.log(this.isPullUpLoad);
       
       !this.isPullUpLoad && this.$emit('pullUp') //防抖
       this.isPullUpLoad = true
@@ -230,7 +217,6 @@ export default defineComponent({
         'succeed': '刷新成功'
       }
       this.tipText = TEXTS_MAP[phase]
-      console.log(this.tipText);
     },    
 
 

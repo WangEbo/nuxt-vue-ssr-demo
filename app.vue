@@ -8,8 +8,7 @@
 <script lang="ts">
   export default {
     setup(props, ctx){
-      console.log(props);
-      console.log(ctx);
+      
     }
   }
 </script>

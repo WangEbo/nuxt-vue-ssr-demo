@@ -1,5 +1,5 @@
 <template>
-  <div class="good-detail">
+  <div class="good-detail"  @click="clickGood">
     <div class="row1">
       <img :src="detail.url" :alt="detail.alt">
     </div>
@@ -23,12 +23,18 @@ export default defineComponent({
       type: Object as PropType<GoodItem>,
       require: true
     }
+  },
+  methods: {
+    clickGood(){
+      this.$emit('goodClick', this.detail)
+    },
   }
 })
 </script>
 
 <style lang="scss">
 .good-detail{
+  cursor: pointer;
   img{
     width: 100%;
     border-radius: 6px;
